@@ -1,6 +1,7 @@
 # TITLE OF PROJECT
+A house is a home 
 
-AUTHOR NAME
+AUTHOR NAME:Bella Perez
 
 [View this project online](Prototypes/Instructions/Representational Prototype)
 
