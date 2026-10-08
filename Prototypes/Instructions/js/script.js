@@ -15,7 +15,7 @@ let bgColor = "#7faac5";
 let house={
 x: 400, 
 y:400,
-windowSize: 40,
+windowSize: 60,
 
 colors:{
 baseHome: "#231410",
@@ -47,7 +47,7 @@ function draw() {
     //using p5 to center base shape using rectMode center (400,400 becomes the center) 
     rectMode(CENTER);
     rect(house.x,house.y,height/2, width/2); //base house 
-    
+
     //window01-btm right
     fill(house.colors.window);
     //calculates the window spacing (500,500)
@@ -64,6 +64,9 @@ function draw() {
     //window04 -top right
     //calculates the window spacing (500,300)
     rect(house.x + house.x/4,house.y - house.y/4,house.windowSize,house.windowSize);
+
+    //creating the roof
+    triangle(200, 200, 400, 50, 600, 200);
 
     pop (); 
 
