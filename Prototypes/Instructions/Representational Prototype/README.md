@@ -2,7 +2,7 @@
 
 AUTHOR NAME
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](Prototypes/Instructions/Representational Prototype)
 
 ## Description
 This is a representation of a cute little home and also a nod to painted ladies, where victorian homes were repainted. It's a static image.
