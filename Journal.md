@@ -9,6 +9,7 @@ The process of creating a repo was easy since I already had prior experience doi
 
 When choosing visuals for my website, I wanted it to look clean with a flashy banner. I relied on the resources provided in the assignment documentation for its syntax. Although I wish I had leaned more into stylization because the website felt as if it was lacking some personality, especially in font type and color. However, I cannot directly use CSS with markup, which I did attempt earlier.
 
+![alt text](<images/Screenshot 2026-10-08 223833.png>)
 
 
 
