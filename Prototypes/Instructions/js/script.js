@@ -1,32 +1,32 @@
 /**
- * Instructions Assignment #2  (Representational Prototype)
+ * Instructions Assignment #2  
  * Bella Perez
  * 
- * incorporates shapes to mimic a painted ladies home. Use of a triangle, rectangles, and a little math. 
- * 
+ * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
+ * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
  */
 
 "use strict";
 
-//declaring bg color variable using a hexcode (baby blue!)
+//declaring bg color variable (baby blue!)
 let bgColor = "#7faac5";
 
-//declaring house related variables  
+//house variables 
 let house = {
     x: 400,
     y: 400,
     windowSize: 60,
 
-    //declaring colors using hexcodes
-    fillColor: {
-        brown: "#231410",
-        pink: "#b290aa",
+    colors: {
+        baseHome: "#231410",
+        window: "#b290aa",
+
     }
 
 }
 
 /**
- * The setup function is used as a base in p5 and will only run once.
+ * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
 function setup() {
     //creating a canvas
@@ -36,24 +36,20 @@ function setup() {
 
 
 /**
- * function draw contains all the shapes such as a triangle and rectangles in order to form a home. per using p5 this function will a infinite loop.
+ * making a cute little home (a painted ladies esque style!) 
 */
 function draw() {
     push();
     //applying blue bg color
     background(bgColor);
-
-    //base house fill 
-    fill(house.fillColor.brown);
-
+    //base house fill using hexcodes
+    fill(house.colors.baseHome);
     //using p5 to center base shape using rectMode center (400,400 becomes the center) 
     rectMode(CENTER);
-
-    //base house position
-    rect(house.x, house.y, height / 2, width / 2);
+    rect(house.x, house.y, height / 2, width / 2); //base house 
 
     //window01-btm right
-    fill(house.fillColor.pink);
+    fill(house.colors.window);
     //calculates the window spacing (500,500)
     rect(house.x + house.x / 4, house.y + house.y / 4, house.windowSize, house.windowSize);
 
@@ -69,10 +65,12 @@ function draw() {
     //calculates the window spacing (500,300)
     rect(house.x + house.x / 4, house.y - house.y / 4, house.windowSize, house.windowSize);
 
-    //creating the roof 
+    //creating the roof
     triangle(200, 200, 400, 50, 600, 200);
 
     pop();
+
+
 
 
 }

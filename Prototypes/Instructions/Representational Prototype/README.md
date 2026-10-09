@@ -1,16 +1,13 @@
-# TITLE OF PROJECT
-A house is a home 
+# A house is a home 
 
-AUTHOR NAME:Bella Perez
+AUTHOR NAME: Bella Perez
 
-[View this project online](Prototypes/Instructions/Representational Prototype)
+[View this project online](https://nanao707.github.io/CART253/Prototypes/Instructions/Representational%20Prototype/index.html)
 
 ## Description
 This is a representation of a cute little home and also a nod to painted ladies, where victorian homes were repainted. It's a static image.
 
 ## Attribution
-
-This bit should attribute any code, assets or other elements used taken from other sources. For example:
 
 > - This project uses [p5.js](https://p5js.org).
 

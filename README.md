@@ -8,7 +8,7 @@ Hello! Welcome to my tiny homepage. This right here is a collection of work expe
 
 ## Prototypes Below!!
 
-- [Prototype-Instructions-Representational](Prototypes/Instructions/Representational%20Prototype/index.html)
+- [Prototype-Instructions-Very Weird]()
 - [Prototype-Instructions-Representational](Prototypes/Instructions/Representational%20Prototype/index.html)
 - [Prototype-Intructions-Abstract](Prototypes/Instructions/Abstract%20Prototype/index.html)
 - [Prototype-Varaibles](Prototypes/Variables/index.html)
