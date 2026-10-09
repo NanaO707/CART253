@@ -29,7 +29,7 @@ Hello! Welcome to my tiny homepage. This right here is a collection of work expe
 ![mixed digital art](images/e7b4f419b1d594160371dfdd6f204aba.jpg)
 
 ### Where you can find me!
-I like playing and making games! specifically, I like story-driven games or those with fantastical elements. Some of my favourite games include Sky Cotl, BG3, and Little Goody Two Shoes. 
+I like playing and making games! Specifically, I like story-driven games or those with fantastical elements. Some of my favourite games include Sky Cotl, BG3, and Little Goody Two Shoes. 
 
 - [Itch.io](https://hheavenly.itch.io/)
 - [GitHub](https://github.com/NanaO707)
