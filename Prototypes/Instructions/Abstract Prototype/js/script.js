@@ -14,14 +14,14 @@ let bgColor = 'black';
 let geometryObject;
 
 /**
- * The setup function is used as a base in p5 and will only run once. referncing p5's code for faces, and lerp color.
+ * The setup function is used as a base in p5 and will only run once. referncing p5's code for faces, and lerp color
 */
 function setup() {
     //creating a canvas
     createCanvas(1920, 1080, WEBGL);
 
-    // Create a p5.Geometry object. (experimenting with 3D shapes)
-    geometryObject = buildGeometry(function () { plane(); });
+    // Create a p5.Geometry object. (experimenting with 3D shapes
+    geometryObject = buildGeometry(function () { cylinder(); });
 
 }
 
@@ -32,29 +32,28 @@ function setup() {
 function draw() {
     push();
 
+    //bgcolor
     background(bgColor);
 
     // Enable orbiting with the mouse.
     orbitControl();
 
-    // Turn on the lights.
-    //lights();
-
     // Style the p5.Geometry object.
     noStroke();
 
     // Set a random seed.
-    randomSeed(5);
+    randomSeed(52);
 
     // Iterate over the faces array.
     for (let face of geometryObject.faces) {
 
-        let blue = color('#1244b5');
-        let red = color('#b53b12');
-        let green = color('#25b512');
+        //declaring lerp colors
+        let magenta = color('#b5129d');
+        let blue = color('#0097f5');
+
 
         //experimenting with lerp color (creates an emmisive glow)
-        let mixedColors = lerpColor(blue, red, green, random(0, 2));
+        let mixedColors = lerpColor(blue, magenta, random(0, 1));
 
         // Style the face.
         fill(mixedColors);
