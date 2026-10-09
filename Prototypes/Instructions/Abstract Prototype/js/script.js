@@ -44,7 +44,6 @@ function draw() {
     //camera position (zoomed in for a trippy effect)  
     camera(10, 10, 80);
 
-
     // Enable orbiting with the mouse.
     orbitControl();
 

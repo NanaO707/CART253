@@ -12,7 +12,9 @@ I created a stained glass, trippy effect that is more abstract than super clear 
 
 This bit should attribute any code, assets or other elements used taken from other sources. For example:
 
-> - This project uses [p5.js](https://p5js.org) and more specifically referencing faces, lerp color, and camera.
+> - This project uses [p5.js](https://p5js.org).
+> - The eyeball images are attributed to [goncharov-denis](https://goncharov-denis.itch.io/eye-boss-sprite)
+
 
 ## License
 
