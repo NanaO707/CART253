@@ -2,13 +2,11 @@
 
 Bella Perez
 
-[View this project online]()
+[View this project online](https://nanao707.github.io/CART253/Prototypes/Instructions/Abstract%20Prototype/index.html)
 
 ## About this project!
 
 I created a stained glass, trippy effect that is more abstract than super clear using a zoomed in cylinder with a lerp effect. Use your mouse to move up, down, or side to side or any direction very quickly or lowly to acquire the full trippy effect.
-
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
 
 ## Attribution
 
