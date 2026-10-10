@@ -2,7 +2,7 @@
  * Instructions Assignment #2 (Really Weird Prototype)
  * Bella Perez
  * 
- * The project below is a colony of eyeballs. When told to make something very werid, I thought of the idea eye contact because its truely unerving to me. 
+ * The project below is a colony of eyeballs. When told to make something very wierd, I thought of the idea eye contact because it's truly unerving to me. 
  * 
  */
 
@@ -11,8 +11,8 @@
 //declaring bg color black
 let bgColor = ('black');
 
-//declaring array of the eyeball gif
-let eyeBallGif = [];
+//single eyeball gif
+let eyeBallGif;
 
 //array of each eyeball x & y
 let eyeBallX = [];
@@ -21,7 +21,7 @@ let eyeBallY = [];
 //array for eyeball size
 let eyeBallSize = [];
 
-//constant eyeball variable 
+//amount of eyeballs 
 const eyeBallAmount = 55;
 
 
@@ -38,32 +38,32 @@ async function setup() {
     //loop all the eyeballs until it reaches eyeBallAmount
     for (let index = 0; index < eyeBallAmount; index++) {
 
-        //randomly assigns a value to stay at a specific location 
+        //randomly assigns a value to stay at a specific location x & y
         eyeBallX[index] = random(0, 900);
         eyeBallY[index] = random(0, 900);
 
-        //resize the eyeballs randomly referencing p5
+        //randomly assigns a size within range  
         eyeBallSize[index] = random(24, 64 * 4);
     }
 }
 
 /**
- * For the setup, I used p5's respective resources for loadImage. Draws the gifs/images , with a randomized eyeball size and position. 
+ * For the draw function, I used p5's respective resources for loadImage syntax. Contains loop to draws the gifs/images, with a randomized eyeball size and position. 
 */
 
 function draw() {
 
     push();
+
     //bg color
     background(bgColor);
 
     //loop to draw the images at a specific position
     for (let index = 0; index < eyeBallAmount; index++) {
-        //
+        //draws the image with all respective sizes and positions 
         image(eyeBallGif, eyeBallX[index], eyeBallY[index], eyeBallSize[index], eyeBallSize[index]);
 
     }
     pop();
-
 
 }
