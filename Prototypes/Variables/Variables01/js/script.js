@@ -32,6 +32,8 @@ let bunny = {
     h: 200,
     w: 40,
 
+    speed: 5,
+
     fillColor: {
         black: (0),
         brown: '#5b3912fe',
@@ -73,20 +75,10 @@ function draw() {
     //bg color fill 
     background(backgroundColor);
 
-
+    //calling full bunny drawing  
     bunnyDrawing();
-
-    //filling the carrot base 
-    fill(carrot.fillColor.orange);
-    triangle(carrot.baseX - 40, carrot.baseY, carrot.baseX + 40, carrot.baseY, carrot.baseX, carrot.baseY + 150);
-
-    //filling the carrot leaves
-    stroke(carrot.fillColor.green);
-    strokeWeight(10);
-    //leave drawings changing each pos
-    line(carrot.baseX, carrot.baseY, carrot.baseX, carrot.baseY - 50);
-    line(carrot.baseX - 10, carrot.baseY, carrot.baseX - 30, carrot.baseY - 40);
-    line(carrot.baseX + 10, carrot.baseY, carrot.baseX + 30, carrot.baseY - 40);
+    //calling full carrot drawing 
+    carrotDrawing();
 
 
     pop();
@@ -118,9 +110,23 @@ function bunnyDrawing() {
     ellipse(bunny.earsX, bunny.earsY, bunny.w - 20, bunny.h - 20);
     ellipse(bunny.earsX + 60, bunny.earsY, bunny.w - 20, bunny.h - 20);
 
+    bunny.headX = bunny.headX + bunny.speed;
+    bunny.earsX = bunny.earsX + bunny.speed;
 
 }
 
 function carrotDrawing() {
+
+    //filling the carrot base 
+    fill(carrot.fillColor.orange);
+    triangle(carrot.baseX - 40, carrot.baseY, carrot.baseX + 40, carrot.baseY, carrot.baseX, carrot.baseY + 150);
+
+    //filling the carrot leaves
+    stroke(carrot.fillColor.green);
+    strokeWeight(10);
+    //leave drawings changing each leave's position
+    line(carrot.baseX, carrot.baseY, carrot.baseX, carrot.baseY - 50);
+    line(carrot.baseX - 10, carrot.baseY, carrot.baseX - 30, carrot.baseY - 40);
+    line(carrot.baseX + 10, carrot.baseY, carrot.baseX + 30, carrot.baseY - 40);
 
 }
