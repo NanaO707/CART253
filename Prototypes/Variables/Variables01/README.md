@@ -6,7 +6,7 @@ AUTHOR NAME: Bella Perez
 
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+The following prototype contains a bunny trying to move towards a carrot automatically on the x axis.
 
 ## Attribution
 
