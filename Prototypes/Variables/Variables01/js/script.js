@@ -46,10 +46,6 @@ let carrot = {
     baseX: 1400,
     baseY: 600,
 
-    leavesX: 100,
-    leavesY: 100,
-
-
     fillColor: {
         orange: '#dd7d0f',
         green: '#2a9b11'
@@ -77,6 +73,27 @@ function draw() {
     //bg color fill 
     background(backgroundColor);
 
+
+    bunnyDrawing();
+
+    //filling the carrot base 
+    fill(carrot.fillColor.orange);
+    triangle(carrot.baseX - 40, carrot.baseY, carrot.baseX + 40, carrot.baseY, carrot.baseX, carrot.baseY + 150);
+
+    //filling the carrot leaves
+    stroke(carrot.fillColor.green);
+    strokeWeight(10);
+    //leave drawings changing each pos
+    line(carrot.baseX, carrot.baseY, carrot.baseX, carrot.baseY - 50);
+    line(carrot.baseX - 10, carrot.baseY, carrot.baseX - 30, carrot.baseY - 40);
+    line(carrot.baseX + 10, carrot.baseY, carrot.baseX + 30, carrot.baseY - 40);
+
+
+    pop();
+
+}
+
+function bunnyDrawing() {
     //no outline
     noStroke();
     //fill color
@@ -102,10 +119,8 @@ function draw() {
     ellipse(bunny.earsX + 60, bunny.earsY, bunny.w - 20, bunny.h - 20);
 
 
-    pop();
-
 }
 
-function bunnyDrawing() {
+function carrotDrawing() {
 
 }
