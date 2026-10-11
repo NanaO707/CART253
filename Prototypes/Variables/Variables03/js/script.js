@@ -15,15 +15,15 @@ let door = {
     x: 450,
     y: 450,
 
-    height: 100,
-    width: 50,
+    height: 200,
+    width: 100,
 
     knob: {
-        x: 20,
-        y: 20,
+        x: 500,
+        y: 450,
 
         //diameter of the knob
-        size: 50,
+        size: 30,
     }
     ,
 
@@ -45,17 +45,27 @@ function setup() {
 
 
 /**
- * Draw contains the code that will endlessly loop per p5
+ * Draw contains the code that will endlessly loop per p5.
 */
 function draw() {
 
     //add background color
     background(bgColor);
 
-    //center the rectangle
+    //center the rectangle(door)
     rectMode(CENTER);
 
+    //fill color black(door)
     fill(door.fillColor.black);
+    //door dimensions and position 
     rect(door.x, door.y, door.width, door.height);
+
+    //remove outline
+    noStroke();
+
+    //fill color black(doorknob)
+    fill(door.fillColor.brown);
+    circle(door.knob.x, door.knob.y, door.knob.size);
+
 
 }
