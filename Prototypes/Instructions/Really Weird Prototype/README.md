@@ -14,6 +14,7 @@ This bit should attribute any code, assets or other elements used taken from oth
 
 > - This project uses [p5.js](https://p5js.org) and to be specific loadimage and aysnc setup.
 > - The eyeball images are attributed to [goncharov-denis](https://goncharov-denis.itch.io/eye-boss-sprite).
+> - [bulkpic](https://bulkpictools.com/tools/gif/gif-maker) used to turn sprite into a gif.
 
 
 ## License
