@@ -34,7 +34,7 @@ I like playing and making games! Specifically, I like story-driven games or thos
 
 ![alt text](<images/eyeballSC.png>)
 
-### Get that carrot!-Variables
+### Get that carrot! - Variables
 
 - [Prototype-Varaibles](Prototypes/Variables/Variables01/index.html)
 
