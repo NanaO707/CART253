@@ -2,23 +2,17 @@
  * Get that Carrot!
  * Bella Perez
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * The following prototype contains a bunny trying to move towards a carrot automatically.
  */
 
 "use strict";
-
-// What parts of a program can you use variables in (especially which numbers in a program can be replaced with variables)
-// What happens when you change the values in those variables over time ?
-//     Can you use variables to change: positions ? Sizes ? Colours ? Stroke weights ? Rotations ?
-//         What happens if you use different kinds of math to change the variables ? Addition ? Subtract ? Division ? Multiplication ? Exponentials ? Sine ? Cosine ? Tangent ? Random ? Perlin Noise ?
 
 let backgroundColor = 'rgb(65, 156, 248)';
 
 //declaring bunny head, ears, eyes, and colors
 let bunny = {
 
-    //position of the bunny head
+    //position of the bunny heads
     headX: 900,
     headY: 600,
     //the diameter/size of the head
@@ -27,13 +21,17 @@ let bunny = {
     //the diameter/size of the eyes
     eyesSize: 40,
 
+    //ear position
     earsX: 870,
     earsY: 450,
+    //ear height and width
     h: 200,
     w: 40,
 
+    //bunny speed
     speed: 5,
 
+    //the fill color for the head, eyes, and ears
     fillColor: {
         black: (0),
         brown: '#5b3912fe',
@@ -45,9 +43,14 @@ let bunny = {
 //declaring carrot base, leaves, and colors
 let carrot = {
 
+    //base leaf 
     baseX: 1400,
     baseY: 600,
 
+    //stroke weight for the leaves on the carrot
+    leafThickness: 10,
+
+    //carrot leaves and the base of the carrot color
     fillColor: {
         orange: '#dd7d0f',
         green: '#2a9b11'
@@ -56,7 +59,7 @@ let carrot = {
 }
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * The setup function only runs once per p5. It's soley creating a canvas
 */
 
 function setup() {
@@ -67,7 +70,7 @@ function setup() {
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * calls upon the drawing functions for the bunny and the carrot. Per p5 this function will loop endlessly.
 */
 function draw() {
 
@@ -80,10 +83,16 @@ function draw() {
     //calling full carrot drawing 
     carrotDrawing();
 
-
     pop();
 
 }
+
+/**
+ * This function contains all the code for drawing the differnt parts of the bunny such as the head, eyes, and ears.
+ *  It also assigns them their respective color.
+ * Conatin's the movement of the bunny along the x axis to move towards the carrot.
+ * Uses ellipses and circles.
+*/
 
 function bunnyDrawing() {
     //no outline
@@ -102,10 +111,12 @@ function bunnyDrawing() {
     circle(bunny.headX - bunny.headSize / 5.5, bunny.headY - bunny.headSize / 5.5, bunny.eyesSize);
     circle(bunny.headX + bunny.headSize / 5.5, bunny.headY - bunny.headSize / 5.5, bunny.eyesSize);
 
+    //draws the base ears brown and positions the ears
     fill(bunny.fillColor.brown);
     ellipse(bunny.earsX, bunny.earsY, bunny.w, bunny.h);
     ellipse(bunny.earsX + 60, bunny.earsY, bunny.w, bunny.h);
 
+    //draws the inner ears pink and positions the ears slightly smaller than the base
     fill(bunny.fillColor.pink);
     ellipse(bunny.earsX, bunny.earsY, bunny.w - 20, bunny.h - 20);
     ellipse(bunny.earsX + 60, bunny.earsY, bunny.w - 20, bunny.h - 20);
@@ -115,6 +126,11 @@ function bunnyDrawing() {
 
 }
 
+/**
+ * This function contains all the code for drawing the differnt parts of the carrot such as the base carrot and leaves.
+ *  It also assigns them their respective color. Uses lines and a triangle.
+*/
+
 function carrotDrawing() {
 
     //filling the carrot base 
@@ -123,7 +139,7 @@ function carrotDrawing() {
 
     //filling the carrot leaves
     stroke(carrot.fillColor.green);
-    strokeWeight(10);
+    strokeWeight(carrot.leafThickness);
     //leave drawings changing each leave's position
     line(carrot.baseX, carrot.baseY, carrot.baseX, carrot.baseY - 50);
     line(carrot.baseX - 10, carrot.baseY, carrot.baseX - 30, carrot.baseY - 40);

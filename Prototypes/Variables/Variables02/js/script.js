@@ -5,6 +5,10 @@
  * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
  * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
  */
+// What parts of a program can you use variables in (especially which numbers in a program can be replaced with variables)
+// What happens when you change the values in those variables over time ?
+//     Can you use variables to change: positions ? Sizes ? Colours ? Stroke weights ? Rotations ?
+//         What happens if you use different kinds of math to change the variables ? Addition ? Subtract ? Division ? Multiplication ? Exponentials ? Sine ? Cosine ? Tangent ? Random ? Perlin Noise ?
 
 "use strict";
 
