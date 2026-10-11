@@ -15,7 +15,16 @@
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
+let bgColor = '#a2c6cf';
+
+//heart variables 
 let heart = {
+    x: 450,
+    y: 450,
+
+    //size or diameter
+    size: 106,
+    //fill colors 
     fillcolor: {
         red: '#800606',
         pink: '#f3bbef',
@@ -23,6 +32,10 @@ let heart = {
     }
 }
 function setup() {
+    //create canvas
+    createCanvas(900, 900);
+
+
 
 }
 
@@ -32,4 +45,26 @@ function setup() {
 */
 function draw() {
 
+    background(bgColor);
+
+    //call heart to draw 
+    heartDraw();
+
+
+
+
+}
+
+function heartDraw() {
+
+    //remove outline
+    noStroke();
+    //add red color to the heart
+    fill(heart.fillcolor.red);
+    //create 2 circles in the middle of the canvas but slightly spaced
+    circle(heart.x - 40, heart.y - 20, heart.size);
+    circle(heart.x + 40, heart.y - 20, heart.size);
+
+    //craete triangle for the bottom
+    triangle(heart.x + 90, heart.y, heart.x - 90, heart.y, heart.x, heart.y + 130);
 }
