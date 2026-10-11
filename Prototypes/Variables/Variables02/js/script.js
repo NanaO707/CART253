@@ -1,5 +1,5 @@
-/**
- * Title of Project
+/**Give me Love
+ * 
  * Bella Perez
  * 
  * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
@@ -11,6 +11,13 @@
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
+let heart = {
+    fillcolor: {
+        red: '#800606',
+        pink: '#f3bbef',
+        blue: '#00236f'
+    }
+}
 function setup() {
 
 }

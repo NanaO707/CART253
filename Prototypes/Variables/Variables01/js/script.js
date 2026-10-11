@@ -24,13 +24,13 @@ let bunny = {
     //the diameter/size of the head
     headSize: 150,
 
-    eyesX: 900,
-    eyesY: 600,
-    eyesSize: 10,
+    //the diameter/size of the eyes
+    eyesSize: 40,
 
-    earsX: 40,
-    earsY: 50,
-    earSize: 80,
+    earsX: 870,
+    earsY: 450,
+    h: 200,
+    w: 40,
 
     fillColor: {
         black: (0),
@@ -81,6 +81,8 @@ function draw() {
     noStroke();
     //fill color
     fill(bunny.fillColor.brown);
+
+    ellipseMode(CENTER);
     //the x,y and size of the head
     circle(bunny.headX, bunny.headY, bunny.headSize);
 
@@ -88,17 +90,22 @@ function draw() {
     fill(bunny.fillColor.black);
 
     //calcualte and draw the bunny eyes relative to the head
-    circle(bunny.headX - bunny.headSize / 5, bunny.headY - bunny.headSize / 5, bunny.headSize / 3);
-    circle(bunny.headX + bunny.headSize / 5, bunny.headY - bunny.headSize / 5, bunny.headSize / 3);
+    circle(bunny.headX - bunny.headSize / 5.5, bunny.headY - bunny.headSize / 5.5, bunny.eyesSize);
+    circle(bunny.headX + bunny.headSize / 5.5, bunny.headY - bunny.headSize / 5.5, bunny.eyesSize);
 
+    fill(bunny.fillColor.brown);
+    ellipse(bunny.earsX, bunny.earsY, bunny.w, bunny.h);
+    ellipse(bunny.earsX + 60, bunny.earsY, bunny.w, bunny.h);
 
-
-
-
-
-
+    fill(bunny.fillColor.pink);
+    ellipse(bunny.earsX, bunny.earsY, bunny.w - 20, bunny.h - 20);
+    ellipse(bunny.earsX + 60, bunny.earsY, bunny.w - 20, bunny.h - 20);
 
 
     pop();
+
+}
+
+function bunnyDrawing() {
 
 }
