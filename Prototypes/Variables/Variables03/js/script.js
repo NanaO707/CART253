@@ -1,17 +1,12 @@
 /**
- * Mystery door?
+ * Let me in...
  * Bella Perez
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * A mysterious door appears before you. 
+ * A range of pretty color changes is bestowed upon you. 
+ * Weirdly enough, the door shakes viciously, almost like someone is locked inside… 
  */
-// What parts of a program can you use variables in (especially which numbers in a program can be replaced with variables)
-// What happens when you change the values in those variables over time ?
-//     Can you use variables to change: positions ? Sizes ? Colours ? Stroke weights ? Rotations ?
-//         What happens if you use different kinds of math to change the variables ? Addition ? Subtract ? Division ? Multiplication ? Exponentials ? Sine ? Cosine ? Tangent ? Random ? Perlin Noise ?
-//             What kinds of meanings can be created through change in your program ? Movement ? Growth ? Death ? Life ? Decay ? Indecision ? Time passing ? Sadness ? Joy ?
-
-"use strict";
+// 
 //bg color variable
 let bgColor = '#000000';
 
@@ -28,6 +23,8 @@ let door = {
     knob: {
         //diameter/size of the knob
         size: 40,
+        //doorknob shake amount 
+        shake: 5,
 
     }
     ,
@@ -78,8 +75,8 @@ function draw() {
     //fill color brown (doorknob)
     fill(door.fillColor.brown);
 
-    //changing the doorknob values so it moves as one with door
-    circle(door.x + door.width / 3, door.y, door.knob.size);
+    //changing the doorknob values so it moves as one with door. Added doorknob shake that randomly shakes between values -5 to 5
+    circle(door.x + door.width / 3 + random(-door.knob.shake, door.knob.shake), door.y + random(-door.knob.shake, door.knob.shake), door.knob.size);
 
 }
 
@@ -92,7 +89,4 @@ function doorColorChange() {
 
     //fill color with palette lerp
     fill(doorColor);
-
-
-
 }
