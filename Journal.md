@@ -35,3 +35,21 @@ Lastly, for the very weird prototype, I immediately thought of adding eyes to th
 ![eyeballs everywhere](<images/eyeballSC.png>)
 
 ---
+
+## 2026/10/11 - Variable Prototypes
+
+
+
+### Variable01
+
+![door](<images/Screenshot 2026-10-11 221140.png>)
+
+### Variable02
+
+![heart](<images/Screenshot 2026-10-11 221213.png>)
+
+### Variable03
+
+![door](<images/Screenshot 2026-10-11 221245.png>)
+
+

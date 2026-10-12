@@ -38,14 +38,20 @@ I like playing and making games! Specifically, I like story-driven games or thos
 
 - [Prototype-Varaibles](Prototypes/Variables/Variables01/index.html)
 
+![door](<images/Screenshot 2026-10-11 221140.png>)
+
+
 ### Give me Love! - Variables
 
 - [Prototype-Varaibles](Prototypes/Variables/Variables02/index.html)
+
+![heart](<images/Screenshot 2026-10-11 221213.png>)
 
 ### Let me in... - Variables
 
 - [Prototype-Varaibles](Prototypes/Variables/Variables03/index.html)
 
+![door](<images/Screenshot 2026-10-11 221245.png>)
 
 
 ## Journal Below!!
