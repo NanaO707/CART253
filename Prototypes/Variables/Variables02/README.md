@@ -1,4 +1,4 @@
-# VARIABLES-- Give me Love!
+# VARIABLES -- Give me Love!
 
 AUTHOR NAME: Bella Perez
 

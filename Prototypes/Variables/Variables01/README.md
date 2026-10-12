@@ -1,4 +1,4 @@
-# VARIABLES01--Get that Carrot!
+# VARIABLES01 -- Get that Carrot!
 
 AUTHOR NAME: Bella Perez
 

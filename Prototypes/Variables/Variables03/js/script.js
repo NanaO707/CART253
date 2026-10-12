@@ -48,7 +48,6 @@ function setup() {
 
 }
 
-
 /**
  * Draw contains the code that will endlessly loop per p5. Draws the door and doorknob
 */

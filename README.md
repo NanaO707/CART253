@@ -38,6 +38,16 @@ I like playing and making games! Specifically, I like story-driven games or thos
 
 - [Prototype-Varaibles](Prototypes/Variables/Variables01/index.html)
 
+### Give me Love! - Variables
+
+- [Prototype-Varaibles](Prototypes/Variables/Variables02/index.html)
+
+### Let me in... - Variables
+
+- [Prototype-Varaibles](Prototypes/Variables/Variables03/index.html)
+
+
+
 ## Journal Below!!
 
 [Reflective Journal](Journal.md)
