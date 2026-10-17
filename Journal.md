@@ -39,17 +39,33 @@ Lastly, for the very weird prototype, I immediately thought of adding eyes to th
 ## 2026/10/11 - Variable Prototypes
 
 
-
 ### Variable01
 
-![door](<images/Screenshot 2026-10-11 221140.png>)
+For the bunny prototype, I decided to create a bunny face. The eyes took more finagling, and I learned to create evenly spaced ellipses. I also used stroke and stroke weight for the first time to create leaves. I played with the values to get the desired result. A bad habit I have is adding arbitrary values sometimes for my variables and tweaking them as I go. Alongside, I kept adding additional variables that weren't necessary, making the bunny not move as one and breaking it down into different parts. I hope people find it cute and a little silly. I would attempt turning this into an interactive experience where the bunny chases the carrot using WASD for movement.
+
+![bunny](<images/Screenshot 2026-10-11 221245.png>)
+
+
+
 
 ### Variable02
 
+For the heart prototype, I learned how to create a beating heart using p5.  For making the heart shape, I approached it by breaking it down into 3 shapes (2 circles and a triangle). The easy part consisted of changing the heart color. The following step was having it grow as the mouseX and mouseY go towards the bottom of the screen. What surprised me is for growing as the mouse drags that if I didn't include mouseY, the heart would turn upside down because the values of the heart became negative. The hardest part was including a beating heart using frameCount and combining the other effects. I hope people enjoy the meaning of this piece, that love permanently changes you. I would further develop this idea by adding sound effects to the heart and perhaps trying to draw an anatomically accurate heart using shapes.
+
 ![heart](<images/Screenshot 2026-10-11 221213.png>)
+
+
+
 
 ### Variable03
 
-![door](<images/Screenshot 2026-10-11 221245.png>)
+For "Let me in", I wanted to explore a spookier subject matter. Although the drawing itself is a simple door, doors collectively have so many metaphors, whether it's something we avoid behind a locked door or opening doors and opportunities. I learned to use palette lerp with the help of p5, since from a previous project lerpColor was only able to combine 2 colors. What surprised me was pallette lerp is a very customizable function with time, colors, how long each color can appear for, and looping it with modulo. I hope people get a bit creeped out. I would love to develop this further by adding multiple doors and adding monsters behind some of them, with humans behind others.
+
+![door](<images/Screenshot 2026-10-11 221140.png>)
+
+
+---
+
+
 
 
