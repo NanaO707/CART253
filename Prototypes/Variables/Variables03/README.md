@@ -2,11 +2,11 @@
 
 AUTHOR NAME: Bella Perez
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](https://nanao707.github.io/CART253/Prototypes/Variables/Variables03/index.html)
 
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+A mysterious door appears before you. A range of pretty color changes is bestowed upon you. Weirdly enough, the door shakes viciously, almost like someone is locked inside… 
 
 ## Attribution
 

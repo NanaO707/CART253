@@ -38,8 +38,7 @@ I like playing and making games! Specifically, I like story-driven games or thos
 
 - [Prototype-Varaibles](Prototypes/Variables/Variables01/index.html)
 
-![door](<images/Screenshot 2026-10-11 221140.png>)
-
+![bunny](<images/Screenshot 2026-10-11 221245.png>)
 
 ### Give me Love! - Variables
 
@@ -51,7 +50,7 @@ I like playing and making games! Specifically, I like story-driven games or thos
 
 - [Prototype-Varaibles](Prototypes/Variables/Variables03/index.html)
 
-![door](<images/Screenshot 2026-10-11 221245.png>)
+![door](<images/Screenshot 2026-10-11 221140.png>)
 
 
 ## Journal Below!!
