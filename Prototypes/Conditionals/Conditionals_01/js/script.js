@@ -14,6 +14,7 @@ let bgColor = (0);
 // declaring single bed image
 let bedImage;
 
+//array of each bed for x & y
 let bedX = [];
 let bedY = [];
 
