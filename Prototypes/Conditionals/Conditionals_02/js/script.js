@@ -33,6 +33,7 @@ let fish = {
     swimming: false,
 }
 
+//magic word variables that hold x & y positions, the text color, size and empty string for the word "love"
 let magicWord = {
 
     typed: "",
@@ -47,7 +48,7 @@ let magicWord = {
 
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * The setup function is used as a base in p5 and will only run once. Contains creating a canvas.
 */
 function setup() {
     //create canvas
@@ -73,14 +74,21 @@ function draw() {
     textSize(magicWord.size);
     text(magicWord.typed, magicWord.x, magicWord.y);
 
-
-
+    //if fish are swimming and haven't touched they will swim closer until they do 
+    if (fish.swimming === true && fish.leftX < fish.rightX - fish.w) {
+        //left fish moves right to meet the other fishy
+        fish.leftX = fish.leftX + 4;
+        //right fish moves left to meet the other fishy
+        fish.rightX = fish.rightX - 4;
+    }
 
     pop();
 
 
 }
-
+/**
+ * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+*/
 function drawLeftFish() {
     //remove outline 
     noStroke();
@@ -93,7 +101,9 @@ function drawLeftFish() {
         fish.leftX - fish.w / 2 - 60, fish.y - 35,
         fish.leftX - fish.w / 2 - 60, fish.y + 35);
 }
-
+/**
+ * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+*/
 function drawRightFish() {
 
     //right fish color white
@@ -105,7 +115,9 @@ function drawRightFish() {
         fish.rightX + fish.w / 2 + 60, fish.y - 35,
         fish.rightX + fish.w / 2 + 60, fish.y + 35);
 }
-
+/**
+ * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+*/
 function keyPressed() {
 
     //takes the key if it's single char 
@@ -118,10 +130,11 @@ function keyPressed() {
     if (magicWord.typed.length > 4) {
         magicWord.typed = magicWord.typed.slice(1);
     }
-    //if the user types love than the fish will swim (haven't added swimming movemnet yet)
+    //if the user types love than the fish will swim 
     if (magicWord.typed === "love") {
 
         fish.swimming = true;
     }
 }
+
 
