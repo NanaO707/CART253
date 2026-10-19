@@ -14,6 +14,7 @@ let bgColor = (0);
 // declaring single bed image
 let bedImage;
 
+//array of monsterimages 
 let monsterImage = [];
 
 
@@ -21,15 +22,16 @@ let monsterImage = [];
 let bedX = [];
 let bedY = [];
 
-//array of each bed for x & y
+//array of each monster for x & y
 let monsterX = [];
 let monsterY = [];
 
+//array of monester size 
 let monsterSize = [];
-
 
 // //bedImage maximum count 
 const bedAmount = 3;
+
 /**
  * The setup function is used as a base in p5 and will only run once. Contains creating a canvas and async function setup to load an image in refernce to p5. 
 */
@@ -41,13 +43,13 @@ async function setup() {
     //Loading the bed image referncing p5 loadImage 
     bedImage = await loadImage('assets/images/spooky-bed-removebg-preview.png');
 
-    //Loading the bed image referncing p5 loadImage 
+    //Loading monster1 image referncing p5 loadImage 
     monsterImage[0] = await loadImage('assets/images/monster_02.png');
 
-    //Loading the bed image referncing p5 loadImage 
+    //Loading the monster2 image referncing p5 loadImage
     monsterImage[1] = await loadImage('assets/images/monster_03.png');
 
-    //Loading the bed image referncing p5 loadImage 
+    //Loading the monster3 image referncing p5 loadImage
     monsterImage[2] = await loadImage('assets/images/monster_01.png');
 
 
@@ -58,8 +60,9 @@ async function setup() {
         bedX[index] = random(0, 700);
         bedY[index] = random(0, 500);
 
+        //randomly assigns a size within range for the monster assets
         monsterSize[index] = random(64, 64 * 2);
-
+        //places the monster's x & y in the lower middle positioned to the bed 
         monsterX[index] = bedX[index] + 230 - monsterSize[index] / 2;
         monsterY[index] = bedY[index] + 400 - monsterSize[index] / 2;
 
@@ -79,9 +82,9 @@ function draw() {
 
     //for loop to draw the images at the rnadomized locations 
     for (let index = 0; index < bedAmount; index++) {
-        //draw image and position 
+        //draw the bed image and position 
         image(bedImage, bedX[index], bedY[index]);
-
+        //draw the monter image,position, and size  
         image(monsterImage[index], monsterX[index], monsterY[index], monsterSize[index], monsterSize[index]);
 
 
