@@ -2,7 +2,7 @@
 
 Bella Perez
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](https://nanao707.github.io/CART253/Prototypes/Conditionals/Conditionals_02/index.html)
 
 ## Description
 
