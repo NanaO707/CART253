@@ -58,10 +58,6 @@ async function setup() {
     //Loading the monster3 image referncing p5 loadImage
     monsterImage[2] = await loadImage('assets/images/monster_01.png');
 
-    //chooses a random monster image and floor rounds the random number down to a whole number to match a spot in the array 
-    monsterChoice = monsterImage[floor(random(monsterImage.length))];
-
-
     //for loop to assign the beds based on bedAmount bedX & bedY and increments as long as the value is less than bedAmount  
     for (let index = 0; index < bedAmount; index++) {
 
@@ -93,13 +89,33 @@ function draw() {
     for (let index = 0; index < bedAmount; index++) {
         //draw the bed image and position 
         image(bedImage, bedX[index], bedY[index]);
-        //draw the monter image,position, and size  
-        image(monsterChoice, monsterX[index], monsterY[index], monsterSize[index], monsterSize[index]);
 
+        if (monsterPopUp === true) {
+
+            //draw the monter image,position, and size  
+            image(monsterChoice, monsterX[index], monsterY[index], monsterSize[index], monsterSize[index]);
+
+        }
 
     }
 
 
     pop();
 
+}
+
+function mousePressed() {
+    for (let index = 0; index < bedAmount; index++) {
+
+        if (mouseX > bedX[index] && mouseX < bedX[index] + bedImage.width && mouseY > bedY[index] && mouseY < bedY[index] + bedImage.height) {
+
+            //chooses a random monster image and floor rounds the random number down to a whole number to match a spot in the array 
+            monsterChoice = monsterImage[floor(random(monsterImage.length))];
+
+            //monster pops up on bed 
+            monsterPopUp = true;
+
+
+        }
+    }
 }
