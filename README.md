@@ -56,7 +56,7 @@ I like playing and making games! Specifically, I like story-driven games or thos
 
 - [Prototype-Conditionals](Prototypes/Conditionals/Conditionals_01/index.html)
 
-![spooky bed](<images/Screenshot 2026-10-19 020938.png>)
+![spooky bed](<images/Screenshot 2026-10-19 020938 (1).png>)
 
 ###   - Conditionals
 
