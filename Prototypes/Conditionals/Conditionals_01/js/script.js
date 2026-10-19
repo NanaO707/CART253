@@ -14,6 +14,12 @@ let bgColor = (0);
 // declaring single bed image
 let bedImage;
 
+//random chosen monster variable
+let monsterChoice;
+
+// variable that tracks whether the monster is pops up 
+let monsterPopUp = false;
+
 //array of monsterimages 
 let monsterImage = [];
 
@@ -30,7 +36,7 @@ let monsterY = [];
 let monsterSize = [];
 
 // //bedImage maximum count 
-const bedAmount = 3;
+const bedAmount = 1;
 
 /**
  * The setup function is used as a base in p5 and will only run once. Contains creating a canvas and async function setup to load an image in refernce to p5. 
@@ -51,6 +57,9 @@ async function setup() {
 
     //Loading the monster3 image referncing p5 loadImage
     monsterImage[2] = await loadImage('assets/images/monster_01.png');
+
+    //chooses a random monster image and floor rounds the random number down to a whole number to match a spot in the array 
+    monsterChoice = monsterImage[floor(random(monsterImage.length))];
 
 
     //for loop to assign the beds based on bedAmount bedX & bedY and increments as long as the value is less than bedAmount  
@@ -85,7 +94,7 @@ function draw() {
         //draw the bed image and position 
         image(bedImage, bedX[index], bedY[index]);
         //draw the monter image,position, and size  
-        image(monsterImage[index], monsterX[index], monsterY[index], monsterSize[index], monsterSize[index]);
+        image(monsterChoice, monsterX[index], monsterY[index], monsterSize[index], monsterSize[index]);
 
 
     }
