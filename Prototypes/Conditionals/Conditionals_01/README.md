@@ -1,16 +1,14 @@
-# TITLE OF PROJECT
+# What's under my bed
 
 Bella Perez
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](https://nanao707.github.io/CART253/Prototypes/Conditionals/Conditionals_01/index.html)
 
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+Click on the very spooky bed for a random monster between a slaad, troll, or slime. The size may vary as well!
 
 ## Attribution
-
-This bit should attribute any code, assets or other elements used taken from other sources. For example:
 
 > - This project uses [p5.js](https://p5js.org).
 > - This bed image is from Serena The Cartoonist [spooky-bed image](https://serenathecartoonist.com/spooky-bed/).

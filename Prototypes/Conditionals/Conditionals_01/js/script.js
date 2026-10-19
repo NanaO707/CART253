@@ -2,7 +2,7 @@
  * What's under my bed
  * Bella Perez
  * 
- * Click on the very spooky bed to random a monster out of 3 between a slaad, troll, and slime. The size may vary as well!
+ * Click on the very spooky bed for a random monster between a slaad, troll, or slime. The size may vary as well!
  */
 
 "use strict";
