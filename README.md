@@ -58,11 +58,11 @@ I like playing and making games! Specifically, I like story-driven games or thos
 
 ![spooky bed](<images/Screenshot 2026-10-19 020938 (1).png>)
 
-###   - Conditionals
+### Fish and Love - Conditionals
 
 - [Prototype-Conditionals](Prototypes/Conditionals/Conditionals_02/index.html)
 
-![](<images/>)
+![fish in love](<images/Screenshot 2026-10-19 134539.png>)
 
 ###   - Conditionals
 
