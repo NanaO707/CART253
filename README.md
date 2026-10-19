@@ -60,13 +60,13 @@ I like playing and making games! Specifically, I like story-driven games or thos
 
 ###   - Conditionals
 
-- [Prototype-Conditionals](Prototypes/Conditionals/Conditionals_01/index.html)
+- [Prototype-Conditionals](Prototypes/Conditionals/Conditionals_02/index.html)
 
 ![](<images/>)
 
 ###   - Conditionals
 
-- [Prototype-Conditionals](Prototypes/Conditionals/Conditionals_01/index.html)
+- [Prototype-Conditionals](Prototypes/Conditionals/Conditionals_03/index.html)
 
 ![](<images/>)
 
