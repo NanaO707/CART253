@@ -1,9 +1,9 @@
 /**
- * All about Fish and Love 
+ * Fish and Love 
  * Bella Perez
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Two little fish live under the water. Type love so they can find each other and swim towards one another!
+ * 
  */
 
 "use strict";
@@ -26,8 +26,8 @@ let fish = {
 
     //fish fill colors
     fillColor: {
-        orange: '#d78c3c',
-        white: '#d0d0fd',
+        left: '#d78c3c',
+        right: '#d0d0fd',
     },
 
     swimming: false,
@@ -35,16 +35,14 @@ let fish = {
 
 //magic word variables that hold x & y positions, the text color, size and empty string for the word "love"
 let magicWord = {
-
+    //empty string
     typed: "",
-    size: (40),
-    fill: (255),
-    x: 200,
-    y: 200,
+    size: (60),
+    fill: '#c887be',
+    x: 895,
+    y: 300,
 
 }
-
-
 
 
 /**
@@ -58,7 +56,7 @@ function setup() {
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * For the draw function,it loops endlessly to call the functions that draw the fish, display the text, and make the fish swim.
 */
 function draw() {
 
@@ -70,30 +68,24 @@ function draw() {
     drawLeftFish();
     drawRightFish();
 
-    fill(magicWord.fill);
-    textSize(magicWord.size);
-    text(magicWord.typed, magicWord.x, magicWord.y);
+    //calls function to show typed text
+    textDisplay();
 
-    //if fish are swimming and haven't touched they will swim closer until they do 
-    if (fish.swimming === true && fish.leftX < fish.rightX - fish.w) {
-        //left fish moves right to meet the other fishy
-        fish.leftX = fish.leftX + 4;
-        //right fish moves left to meet the other fishy
-        fish.rightX = fish.rightX - 4;
-    }
+    //calls function to make fish swim
+    fishSwim();
 
     pop();
 
 
 }
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * draws the left fish using an ellipse and a triangle proportioned to the tail and body.
 */
 function drawLeftFish() {
     //remove outline 
     noStroke();
     //left fish color is orange 
-    fill(fish.fillColor.orange);
+    fill(fish.fillColor.left);
     // drawing left fish body
     ellipse(fish.leftX, fish.y, fish.w, fish.h);
     //left fish tail calculates the distance between the x position of the tail and stays attached to the body 
@@ -102,12 +94,12 @@ function drawLeftFish() {
         fish.leftX - fish.w / 2 - 60, fish.y + 35);
 }
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * draws the right fish using an ellipse and a triangle proportioned to the tail and body
 */
 function drawRightFish() {
 
     //right fish color white
-    fill(fish.fillColor.white);
+    fill(fish.fillColor.right);
     //drawing right fish body
     ellipse(fish.rightX, fish.y, fish.w, fish.h);
     //tail calculates the distance between the x position of the tail and stays attached to the body 
@@ -116,7 +108,9 @@ function drawRightFish() {
         fish.rightX + fish.w / 2 + 60, fish.y + 35);
 }
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * This function is built into p5. It's being used to track that a single basic character type is pressed, turning them to lowercase automatically. 
+ * It also tracks if there's more than 4 letters the first letter is removed.
+ * When love is typed the fish swim is set to true.
 */
 function keyPressed() {
 
@@ -133,7 +127,32 @@ function keyPressed() {
     //if the user types love than the fish will swim 
     if (magicWord.typed === "love") {
 
+        //fish swim 
         fish.swimming = true;
+    }
+}
+/**
+ * Displays the text with color, size, postion, and based on what the user types.
+*/
+function textDisplay() {
+
+    //fill color for the text
+    fill(magicWord.fill);
+    //the size of the text
+    textSize(magicWord.size);
+    //tracks the text typed and position 
+    text(magicWord.typed, magicWord.x, magicWord.y);
+}
+/**
+ * This function makes the fish swim and haven't touched they will swim closer until they do.  
+*/
+function fishSwim() {
+    //if fish are swimming and haven't touched they will swim closer until they do 
+    if (fish.swimming === true && fish.leftX < fish.rightX - fish.w) {
+        //left fish moves right to meet the other fishy
+        fish.leftX = fish.leftX + 4;
+        //right fish moves left to meet the other fishy
+        fish.rightX = fish.rightX - 4;
     }
 }
 
