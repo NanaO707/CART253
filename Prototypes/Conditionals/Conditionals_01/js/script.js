@@ -1,9 +1,8 @@
 /**
- * What's under my bed :p 
+ * What's under my bed
  * Bella Perez
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Click on the very spooky bed to random a monster out of 3 between a slaad, troll, and slime. The size may vary as well!
  */
 
 "use strict";
@@ -17,10 +16,10 @@ let bedImage;
 //random chosen monster variable
 let monsterChoice;
 
-// variable that tracks whether the monster is pops up 
+//variable that tracks whether the monster is pops up 
 let monsterPopUp = false;
 
-//array of monsterimages 
+//array of monster images 
 let monsterImage = [];
 
 
@@ -32,33 +31,33 @@ let bedY = [];
 let monsterX = [];
 let monsterY = [];
 
-//array of monester size 
+//array of monster size 
 let monsterSize = [];
 
-// //bedImage maximum count 
+//bedImage maximum count 
 const bedAmount = 1;
 
 /**
- * The setup function is used as a base in p5 and will only run once. Contains creating a canvas and async function setup to load an image in refernce to p5. 
+ * The setup function is used as a base in p5 and will only run once. Contains creating a canvas and async function setup to load an image in reference to p5. 
 */
 async function setup() {
 
     //create canvas
     createCanvas(1920, 1080);
 
-    //Loading the bed image referncing p5 loadImage 
+    //Loading the bed image referencing p5 loadImage. 
     bedImage = await loadImage('assets/images/spooky-bed-removebg-preview.png');
 
-    //Loading monster1 image referncing p5 loadImage 
+    //Loading monster1 image referencing p5 loadImage. 
     monsterImage[0] = await loadImage('assets/images/monster_02.png');
 
-    //Loading the monster2 image referncing p5 loadImage
+    //Loading the monster2 image referencing p5 loadImage.
     monsterImage[1] = await loadImage('assets/images/monster_03.png');
 
-    //Loading the monster3 image referncing p5 loadImage
+    //Loading the monster3 image referencing p5 loadImage.
     monsterImage[2] = await loadImage('assets/images/monster_01.png');
 
-    //for loop to assign the beds based on bedAmount bedX & bedY and increments as long as the value is less than bedAmount  
+    //for loop to assign the beds based on bedAmount, bedX, and bedY and increments as long as the value is less than bedAmount. 
     for (let index = 0; index < bedAmount; index++) {
 
         // randomly assigns a value to stay at a specific location for x & y 
@@ -72,41 +71,44 @@ async function setup() {
         monsterY[index] = bedY[index] + 400 - monsterSize[index] / 2;
 
     }
-
 }
 
-
 /**
- * For the draw function, I used p5's respective resources for loadImage syntax.
+ * For the draw function, I used p5's respective resources for loadImage syntax. Loops to draw the bed and the monster images, including position and size. 
 */
 function draw() {
 
     push();
 
-    background(0);
+    //background color set to black
+    background(bgColor);
 
-    //for loop to draw the images at the rnadomized locations 
+    //for loop to draw the images at the randomized locations 
     for (let index = 0; index < bedAmount; index++) {
         //draw the bed image and position 
         image(bedImage, bedX[index], bedY[index]);
 
+        //if the monster pop up is true then it will draw the image, position, and size of the monster.
         if (monsterPopUp === true) {
 
-            //draw the monter image,position, and size  
+            //draw the monster image, position, and size  
             image(monsterChoice, monsterX[index], monsterY[index], monsterSize[index], monsterSize[index]);
 
         }
-
     }
 
-
     pop();
-
 }
 
+/**
+ * The mousePressed function runs every time a mouse is clicked. It loops through the number of beds and calculates that if the mouse is pressed over the dimensions of the bed, then a random monster will pop up(out of 3).
+*/
 function mousePressed() {
+
+    //for loop amount of beds 
     for (let index = 0; index < bedAmount; index++) {
 
+        //calculates that if the mouse is pressed for the dimensions of the bed then a random monster will pop up(out of 3). 
         if (mouseX > bedX[index] && mouseX < bedX[index] + bedImage.width && mouseY > bedY[index] && mouseY < bedY[index] + bedImage.height) {
 
             //chooses a random monster image and floor rounds the random number down to a whole number to match a spot in the array 
@@ -114,8 +116,6 @@ function mousePressed() {
 
             //monster pops up on bed 
             monsterPopUp = true;
-
-
         }
     }
 }
