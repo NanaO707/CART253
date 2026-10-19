@@ -15,7 +15,7 @@ let bgColor = '#5367b0';
 let fish = {
     //left and right fish x variables 
     leftX: 300,
-    rightX: 1000,
+    rightX: 1600,
 
     //fish height and width variables 
     h: 70,
@@ -52,18 +52,25 @@ function draw() {
     background(bgColor);
 
     noStroke();
-    //drawing left fish 
+    //left fish color is orange 
     fill(fish.fillColor.orange);
-    //head
+    // drawing left fish body
     ellipse(fish.leftX, fish.y, fish.w, fish.h);
-    //tail
-    triangle(fish.leftX - fish.w / 2 + 70, fish.y,
-        fish.leftX / 2, fish.y - 35,
-        fish.leftX / 2, fish.y + 35)
+    //left fish tail calculates the distance between the x position of the tail and stays attached to the body 
+    triangle(fish.leftX, fish.y,
+        fish.leftX - fish.w / 2 - 60, fish.y - 35,
+        fish.leftX - fish.w / 2 - 60, fish.y + 35);
 
 
-    //drawing right fish 
+    //right fish color white
     fill(fish.fillColor.white);
+    //drawing right fish body
+    ellipse(fish.rightX, fish.y, fish.w, fish.h);
+    //tail calculates the distance between the x position of the tail and stays attached to the body 
+    triangle(fish.rightX, fish.y,
+        fish.rightX + fish.w / 2 + 60, fish.y - 35,
+        fish.rightX + fish.w / 2 + 60, fish.y + 35);
+
 
     pop();
 
@@ -72,3 +79,4 @@ function draw() {
 
 
 }
+
