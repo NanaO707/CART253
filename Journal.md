@@ -66,6 +66,17 @@ For "Let me in", I wanted to explore a spookier subject matter. Although the dra
 
 ---
 
+## 2026/10/19 - Conditional Prototypes
+
+
+
+### Conditional 01
+![spooky bed](<images/Screenshot 2026-10-19 020938 (1).png>)
+
+### Conditional 02
+![fish in love](<images/Screenshot 2026-10-19 134539.png>)
+
+### Conditional 03
 
 
 
