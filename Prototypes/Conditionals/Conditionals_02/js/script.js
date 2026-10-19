@@ -27,11 +27,25 @@ let fish = {
     //fish fill colors
     fillColor: {
         orange: '#d78c3c',
-        white: '#d0d0fd'
-    }
+        white: '#d0d0fd',
+    },
+
+    swimming: false,
 }
 
-let typed = "";
+let magicWord = {
+
+    typed: "",
+    size: (40),
+    fill: (255),
+    x: 200,
+    y: 200,
+
+}
+
+
+
+
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
@@ -51,6 +65,24 @@ function draw() {
     //bg color 
     background(bgColor);
 
+    //calls the functions that draw the left and right fish
+    drawLeftFish();
+    drawRightFish();
+
+    fill(magicWord.fill);
+    textSize(magicWord.size);
+    text(magicWord.typed, magicWord.x, magicWord.y);
+
+
+
+
+    pop();
+
+
+}
+
+function drawLeftFish() {
+    //remove outline 
     noStroke();
     //left fish color is orange 
     fill(fish.fillColor.orange);
@@ -60,7 +92,9 @@ function draw() {
     triangle(fish.leftX, fish.y,
         fish.leftX - fish.w / 2 - 60, fish.y - 35,
         fish.leftX - fish.w / 2 - 60, fish.y + 35);
+}
 
+function drawRightFish() {
 
     //right fish color white
     fill(fish.fillColor.white);
@@ -70,13 +104,24 @@ function draw() {
     triangle(fish.rightX, fish.y,
         fish.rightX + fish.w / 2 + 60, fish.y - 35,
         fish.rightX + fish.w / 2 + 60, fish.y + 35);
+}
 
+function keyPressed() {
 
-    pop();
+    //takes the key if it's single char 
+    if (key.length === 1) {
+        //sets the keys to lowercase
+        magicWord.typed = magicWord.typed + key.toLowerCase();
+    }
 
+    //conditional if there's more than 4 letters it removes the first letter so it stays at 4
+    if (magicWord.typed.length > 4) {
+        magicWord.typed = magicWord.typed.slice(1);
+    }
+    //if the user types love than the fish will swim (haven't added swimming movemnet yet)
+    if (magicWord.typed === "love") {
 
-
-
-
+        fish.swimming = true;
+    }
 }
 
