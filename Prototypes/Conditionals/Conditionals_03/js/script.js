@@ -1,14 +1,16 @@
 /**
- * Sunny day or a downpour
+ * Little grass needs the rain
  * Bella Perez
  * 
  * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
  * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
  * 
- * smt about the weather if the sky is grey, it rains and if the sky is sunny plants or grass emerges.
+ *
  */
 
 "use strict";
+
+let sunny = false;
 
 let sky = {
 
@@ -51,24 +53,36 @@ function setup() {
 function draw() {
 
     //sets background color to light blue
-    background(sky.lightBlue);
+    if (sunny) {
+        background(sky.lightBlue);
 
-    // //makes the rain dark blue
-    // stroke(rain.darkBlue);
+        //grass will grow upwards
+        if (grass.h < 50) {
+            grass.h = grass.h + 0.5;
+        }
+    }
 
+    else {
+        background(sky.grey);
+        //grass will retract
+        if (grass.h > 0) {
+            grass.h = grass.h - 0.5;
+        }
 
-    // //loops 50 lines for the rain randomly every frame
-    // for (let index = 0; index < 50; index++) {
-    //     //randomizes the position of each raindrop
-    //     let x = random(width);
-    //     let y = random(height - 50);
+        //makes the rain dark blue
+        stroke(rain.darkBlue);
 
-    //     //draws the raindrop line
-    //     line(x, y, x, y + 10);
+        //loops 50 lines for the rain randomly every frame
+        for (let index = 0; index < 50; index++) {
+            //randomizes the position of each raindrop
+            let x = random(width);
+            let y = random(height - 50);
 
-    // }
+            //draws the raindrop line
+            line(x, y, x, y + 10);
 
-
+        }
+    }
 
     //sets grass to dark green color
     stroke(grass.darkGreen);
@@ -80,10 +94,6 @@ function draw() {
         line(index, height - 50, index, height - 50 - grass.h);
 
     }
-    //grass will grow upwards
-    if (grass.h < 50) {
-        grass.h = grass.h + 0.5;
-    }
 
     //removes outline
     noStroke();
@@ -92,7 +102,10 @@ function draw() {
     //ground box
     rect(0, height - 50, width, 50);
 
+}
+
+function mousePressed() {
 
 
-
+    sunny = !sunny;
 }
