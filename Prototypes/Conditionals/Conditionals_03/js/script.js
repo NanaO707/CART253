@@ -23,6 +23,13 @@ let rain = {
 
 }
 
+let grass = {
+
+    h: 0,
+    darkGreen: '#033f20',
+
+}
+
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
@@ -42,18 +49,40 @@ function draw() {
     //sets background color to light blue
     background(sky.lightBlue);
 
-    //makes the rain dark blue
-    stroke(rain.darkBlue);
+    // //makes the rain dark blue
+    // stroke(rain.darkBlue);
 
-    //loops 50 lines for the rain randomly every frame 
-    for (let index = 0; index < 50; index++) {
-        //randomizes the position of each raindrop
-        let x = random(width);
-        let y = random(height - 50);
 
-        //draws the raindrop line
-        line(x, y, x, y + 10);
+    // //loops 50 lines for the rain randomly every frame
+    // for (let index = 0; index < 50; index++) {
+    //     //randomizes the position of each raindrop
+    //     let x = random(width);
+    //     let y = random(height - 50);
+
+    //     //draws the raindrop line
+    //     line(x, y, x, y + 10);
+
+    // }
+
+
+
+    //sets grass to dark green color
+    stroke(grass.darkGreen);
+    //sets grass thickness 
+    strokeWeight(3);
+
+    //for loop to draw the strands of grass 
+    for (let index = 5; index < width; index += 10) {
+        line(index, height - 50, index, height - 50 - grass.h);
 
     }
+    //grass will grow upwards
+    if (grass.h < 50) {
+        grass.h = grass.h + 1;
+    }
+
+    strokeWeight(1);
+
+
 
 }
