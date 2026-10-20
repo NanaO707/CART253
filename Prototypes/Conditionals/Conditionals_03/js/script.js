@@ -30,6 +30,10 @@ let grass = {
 
 }
 
+let ground = {
+    brown: '#534225',
+}
+
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
@@ -78,10 +82,16 @@ function draw() {
     }
     //grass will grow upwards
     if (grass.h < 50) {
-        grass.h = grass.h + 1;
+        grass.h = grass.h + 0.5;
     }
 
-    strokeWeight(1);
+    //removes outline
+    noStroke();
+    //sets ground to brown
+    fill(ground.brown);
+    //ground box
+    rect(0, height - 50, width, 50);
+
 
 
 
