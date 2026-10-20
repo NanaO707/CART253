@@ -6,7 +6,7 @@ Bella Perez
 
 ## Description
 
-Click the screen to make the rain go away and turn the sky bright and little grass grows! And click again to reverse the effect :)
+Click the screen to make the rain go away and turn the sky bright and little grass grows! And click again to reverse the effect!
 
 ## Attribution
 
