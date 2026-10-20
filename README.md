@@ -64,11 +64,18 @@ I like playing and making games! Specifically, I like story-driven games or thos
 
 ![fish in love](<images/Screenshot 2026-10-19 134539.png>)
 
-###   - Conditionals
+### Little grass needs the rain - Conditionals
 
 - [Prototype-Conditionals](Prototypes/Conditionals/Conditionals_03/index.html)
 
-![](<images/>)
+![rain](images/Screenshot%202026-10-20%20151336.png)
+
+
+###  - Events
+
+###  - Events
+
+###  - Events
 
 
 ## Journal Below!!
