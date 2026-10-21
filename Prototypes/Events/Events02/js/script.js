@@ -57,14 +57,14 @@ function draw() {
 
 }
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * This function runs every frame that a key is pressed and built into p5. Changes the values of x and y speed depending on the 4 keys that are pressed. Allows for movement in 4 directions.
 */
 function keyPressed() {
     //when w is pressed the snake moves upwards 
     if (key === 'w') {
         snake.speedY = -snake.speed;
     }
-
+    //when a is pressed the snake moves to the left
     if (key === 'a') {
         snake.speedX = -snake.speed;
     }
@@ -72,21 +72,22 @@ function keyPressed() {
     if (key === 's') {
         snake.speedY = snake.speed;
     }
-
+    //when d is pressed the snake moves to the right
     if (key === 'd') {
         snake.speedX = snake.speed;
     }
 }
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ *  This function runs every frame that a key is released and built into p5. Changes the values of x and y speed and sets it to 0 (stops moving) on keyReleased.
 */
 function keyReleased() {
 
+    //if w or s is pressed. Along the y axis on key release the snake stops moving.
     if (key === 'w' || key === 's') {
         snake.speedY = 0;
     }
-
+    //if a or d is pressed. Along the x axis on key release the snake stops moving. 
     if (key === 'a' || key === 'd') {
         snake.speedX = 0;
     }
