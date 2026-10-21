@@ -66,17 +66,29 @@ For "Let me in", I wanted to explore a spookier subject matter. Although the dra
 
 ---
 
-## 2026/10/19 - Conditional Prototypes
-
-
+## 2026/10/20 - Conditional Prototypes
 
 ### Conditional 01
+
+
+In this prototype, I explored three random monsters popping up from under the bed. I found it challenging to get all three different types of monsters to pop up. The slime would be the only monster displayed since my code would use the first image of the array. I hope people enjoy the spooky themes and the randomized monsters with different sizes as well! I would further develop fixing after 3 clicks, it resets and you have to click 3 times again to randomize. I would add more monster variations and maybe different places like a desk, drawer, and closet.  
+
 ![spooky bed](<images/Screenshot 2026-10-19 020938 (1).png>)
 
+
+
 ### Conditional 02
+For the fish prototype, I was excited to make two fish that swim towards each other when the word love is spelled out. I learned more about taking key types in p5, as some of the syntax was different than my prior knowledge. I learned to use slice, which takes only the last 4 letters the user types. I explored using string in this prototype. I was surprised that when I typed backspace, it would show up as backspace on the screen. I fixed it by adding that it only takes keys that are one character. I hope that users find it cute and charming. I would add that when the fish finally are together, a heart appears and grows. 
+
 ![fish in love](<images/Screenshot 2026-10-19 134539.png>)
 
+
+
 ### Conditional 03
+For the rain and grass prototype, I decided to go for a nature theme. I was also reminded of the rainy weather from that week. I learned to make elements such as lines grow and retract in p5. I was surprised that strokeWeight extended between frames, making my rain thicker than intended. I enjoy the rain effect the most, and I hope people find it soothing. To further develop this, I would add sun and clouds that emerge as well in the sky on click. 
 
 
+![rain](images/Screenshot%202026-10-20%20151336.png)
+
+---
 
