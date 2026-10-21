@@ -1,5 +1,5 @@
 /**
- * A one, one, one, two, three 
+ * A one, one, one, two, three
  * Bella Perez
  * 
  * Double click on the tap shoes for a little show!
@@ -72,7 +72,7 @@ function draw() {
 }
 
 /**
- * This function is dereived from p5 and works every time the user double clicks. Calculates the distance between mouse and the shoes. If it's less than 100 the shoes will move.
+ * This function is derived from p5 and works every time the user double clicks. Calculates the distance between mouse and the shoes. If it's less than 100 the shoes will move.
 */
 function doubleClicked() {
 
