@@ -11,26 +11,30 @@
 //bg color
 let bgColor = '#bfb3e1';
 
-//shoe image
+//declaring shoe image
 let tapShoeImage;
+//array of shoes
 let tapShoes = [];
 
 let firstShoe = {
-    x: 100,
+    x: 250,
+    y: 540,
     tapping: false,
 }
 
 let secondShoe = {
-    x: 400,
+    x: 500,
+    y: 580,
     tapping: false,
 }
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
 async function setup() {
+    //create canvas
     createCanvas(900, 900);
-
-    tapShoeImage = loadImage('assets/images/tap-shoes-silhouette-19-removebg-preview.png');
+    //Loading the tap shoe image referencing p5 loadImage. 
+    tapShoeImage = await loadImage('assets/images/tap-shoes-silhouette-19-removebg-preview.png');
 
 }
 
@@ -41,10 +45,17 @@ async function setup() {
 function draw() {
 
     push();
+    //setting bg color
     background(bgColor);
 
+    //move first shoe to the right
+    firstShoe.x = firstShoe.x + 4;
+    //move second shoe to the right 
+    secondShoe.x = secondShoe.x + 4;
 
-
+    //drawing both shoes
+    image(tapShoeImage, firstShoe.x, firstShoe.y);
+    image(tapShoeImage, secondShoe.x, secondShoe.y);
 
     pop();
 
