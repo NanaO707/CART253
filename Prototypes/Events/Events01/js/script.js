@@ -32,7 +32,11 @@ let secondShoe = {
 */
 async function setup() {
     //create canvas
-    createCanvas(900, 900);
+    createCanvas(1920, 1080);
+
+    //places image in the center of its x & y coordinates 
+    imageMode(CENTER);
+
     //Loading the tap shoe image referencing p5 loadImage. 
     tapShoeImage = await loadImage('assets/images/tap-shoes-silhouette-19-removebg-preview.png');
 
@@ -48,15 +52,38 @@ function draw() {
     //setting bg color
     background(bgColor);
 
-    //move first shoe to the right
-    firstShoe.x = firstShoe.x + 4;
-    //move second shoe to the right 
-    secondShoe.x = secondShoe.x + 4;
+    if (firstShoe.tapping || secondShoe.tapping) {
+        //move first shoe to the right
+        firstShoe.x = firstShoe.x + 4;
+        //move second shoe to the right 
+        secondShoe.x = secondShoe.x + 4;
+    }
+
 
     //drawing both shoes
     image(tapShoeImage, firstShoe.x, firstShoe.y);
     image(tapShoeImage, secondShoe.x, secondShoe.y);
 
     pop();
+
+}
+
+/**
+ * OOPS I DIDN'T 
+*/
+function doubleClicked() {
+
+    //calculates how close the double click is near the first shoe image
+    if (dist(mouseX, mouseY, firstShoe.x, firstShoe.y) < 100) {
+
+        firstShoe.tapping = !firstShoe.tapping;
+    }
+    //calculates how close the double click is near the second shoe image
+    if (dist(mouseX, mouseY, secondShoe.x, secondShoe.y) < 100) {
+
+        secondShoe.tapping = !secondShoe.tapping;
+    }
+
+
 
 }
