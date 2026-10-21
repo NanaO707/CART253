@@ -16,16 +16,19 @@ let tapShoeImage;
 //array of shoes
 let tapShoes = [];
 
+let tapping = false
+
 let firstShoe = {
     x: 250,
     y: 540,
-    tapping: false,
+
 }
+
 
 let secondShoe = {
     x: 500,
     y: 580,
-    tapping: false,
+    //tapping: false,
 }
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
@@ -39,7 +42,6 @@ async function setup() {
 
     //Loading the tap shoe image referencing p5 loadImage. 
     tapShoeImage = await loadImage('assets/images/tap-shoes-silhouette-19-removebg-preview.png');
-
 }
 
 
@@ -52,7 +54,7 @@ function draw() {
     //setting bg color
     background(bgColor);
 
-    if (firstShoe.tapping || secondShoe.tapping) {
+    if (tapping) {
         //move first shoe to the right
         firstShoe.x = firstShoe.x + 4;
         //move second shoe to the right 
@@ -76,12 +78,12 @@ function doubleClicked() {
     //calculates how close the double click is near the first shoe image
     if (dist(mouseX, mouseY, firstShoe.x, firstShoe.y) < 100) {
 
-        firstShoe.tapping = !firstShoe.tapping;
+        tapping = !tapping;
     }
     //calculates how close the double click is near the second shoe image
     if (dist(mouseX, mouseY, secondShoe.x, secondShoe.y) < 100) {
 
-        secondShoe.tapping = !secondShoe.tapping;
+        tapping = !tapping;
     }
 
 
