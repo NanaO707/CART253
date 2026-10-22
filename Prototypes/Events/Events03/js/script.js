@@ -73,6 +73,7 @@ function draw() {
     else {
         //removes purple tint effect
         noTint();
+        skullSound.pause();
     }
 
     //draws the images of a skull, ribcage, and arm.
@@ -82,7 +83,7 @@ function draw() {
         //adds a tint to the image and turns it purple
         tint(playColor);
 
-        //plays specific sound effect for
+        //plays specific sound effect for arm
         armSound.play();
 
     }
@@ -90,6 +91,8 @@ function draw() {
     else {
         //removes purple tint effect
         noTint();
+
+        armSound.pause();
     }
 
     image(armImage, 310, 145);
@@ -107,11 +110,11 @@ function draw() {
     else {
         //removes purple tint effect
         noTint();
+        ribCageSound.pause();
 
     }
 
     image(ribCageImage, 650, 100);
-
 
 
 
