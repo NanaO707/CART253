@@ -19,9 +19,9 @@ let ribCageImage;
 async function setup() {
 
     //create canvas
-    createCanvas(900, 900);
+    createCanvas(1920, 1080);
 
-    skullImage = await loadImage('assets/images/ingameCage.png');
+    skullImage = await loadImage('assets/images/ingameSkull.png');
     armImage = await loadImage('assets/images/ingameHand.png');
     ribCageImage = await loadImage('assets/images/ingameCage.png');
 
@@ -38,9 +38,9 @@ function draw() {
     background('black');
 
     //draws the images of a skull, ribcage, and arm.
-    image(skullImage, 25, 125);
-    image(armImage, 25, 125);
-    image(ribCageImage, 25, 125);
+    image(skullImage, 1300, 325);
+    image(armImage, 310, 145);
+    image(ribCageImage, 650, 100);
 
 
 }
