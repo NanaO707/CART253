@@ -24,7 +24,7 @@ let playColor = "#423197";
 
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * The setup function is used as a base in p5 and will only run once. Contains creating a canvas and async function setup to load an image in reference to p5. 
 */
 async function setup() {
 
@@ -39,65 +39,72 @@ async function setup() {
 
 }
 
-
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ *  Draws the images of a skull, ribcage, and arm. Add a purple tint if they are true else removes tint.
 */
 function draw() {
 
     //add background color
     background('black');
 
+    //if skull is on/true. using tint referncing p5. Adds a tint to the image and turns it purple
     if (skullOn) {
-
-        //using tint referncing p5. 
         tint(playColor);
 
     }
 
     else {
+        //removes purple tint effect
         noTint();
     }
+
     //draws the images of a skull, ribcage, and arm.
     image(skullImage, 1300, 325);
 
     if (armOn) {
-
+        //adds a tint to the image and turns it purple
         tint(playColor);
 
     }
 
     else {
+        //removes purple tint effect
         noTint();
     }
+
     image(armImage, 310, 145);
 
 
     if (ribCageOn) {
-
+        //adds a tint to the image and turns it purple
         tint(playColor);
 
     }
 
     else {
+        //removes purple tint effect
         noTint();
     }
     image(ribCageImage, 650, 100);
 
 
 }
-
+/**
+ * This function is built into p5 and works every time a mouse is pressed. Will turn each skeleton's perspective part on and off depending on what side of the screen is clicked.
+ * 
+*/
 function mousePressed() {
+    //right side is the skull
     if (mouseX > 1200) {
-
+        //opposite of what skullon is set to.
         skullOn = !skullOn;
     }
-
+    //left side is the arm
     if (mouseX < 600) {
 
         armOn = !armOn;
     }
-
+    //in the middle of the two is the ribcage
     if (mouseX > 600 && mouseX < 1200) {
 
         ribCageOn = !ribCageOn;
