@@ -95,21 +95,23 @@ For the rain and grass prototype, I decided to go for a nature theme. I was also
 
 ### Event 01
 
-
-
+For this prototype, I wanted to explore the musicality of tap shoes and performance. I thought it would be cute if, once you double-clicked on the shoes, you'd be able to see tap shoes dancing across the screen. I used distance here for the first time in my personal prototypes. I used it to calculate how close the click was to the first and second images. I also used imageMode center, which I previously used for rectMode center and ellipseMode center, but learned that it works on images as well. I hope users find the concept fun. I would make the shoes move up and down to make it appear more like tap dancing.
 
 ![tap shoes](<images/Screenshot 2026-10-21 223652.png>)
 
+
+
 ### Event 02
 
-
-
+Snake Wonders was inspired by playing snake.io a lot as a child, and I wanted to create a similar visual with circles, except using keyPressed instead of the classic mouse mechanic. I hope it brings out some nostalgia. I learned to use lerp with p5, and it was similar to UE5 but with different syntax. What surprised me is that when drawing out the body, I had to do so from the body to the head. Otherwise, the snake body hid its head. I would further add orbs to pick up that make the user's body grow bigger.
 
 ![snake](<images/Screenshot 2026-10-21 215758.png>)
 
+
+
 ### Event 03
 
-
+For this prototype, Skeleton Melodies was the one I had the most fun with. When searching for 3 different sound effects that might go together, it was a lot of trial and error. I used the same 120 bpm to test what sounded best altogether. I decided to separate the screen into 3 parts with mouseX to simplify my life and code, which paid off in the end. I experimented with sound using p5's respective resources and loop. I found it surprising that using alpha white with tint didn’t add a white overlay, and nothing changed. I hope people have fun with how the different sounds blend on click. I would add more skeletons and more instrumental sound effects to make a symphony using more events such as mouseWheel or keyPressed.
 
 
 ![skeleton parts](<images/Screenshot 2026-10-21 234542.png>)
