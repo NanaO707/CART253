@@ -75,15 +75,19 @@ I like playing and making games! Specifically, I like story-driven games or thos
 
 - [Prototype-Events](Prototypes/Events/Events01/index.html)
 
-![](<images/>)
+![tap shoes](<images/Screenshot 2026-10-21 223652.png>)
 
 ### Snake Wonders - Events
 
 - [Prototype-Events](Prototypes/Events/Events02/index.html)
 
-###  - Events
+![snake](<images/Screenshot 2026-10-21 215758.png>)
+
+### Skeleton Melodies - Events
 
 - [Prototype-Events](Prototypes/Events/Events03/index.html)
+
+![skeleton parts](<images/Screenshot 2026-10-21 234542.png>)
 
 ## Journal Below!!
 

@@ -91,4 +91,26 @@ For the rain and grass prototype, I decided to go for a nature theme. I was also
 ![rain](images/Screenshot%202026-10-20%20151336.png)
 
 ---
+## 2026/10/21 - Event Prototypes
 
+### Event 01
+
+
+
+
+![tap shoes](<images/Screenshot 2026-10-21 223652.png>)
+
+### Event 02
+
+
+
+
+![snake](<images/Screenshot 2026-10-21 215758.png>)
+
+### Event 03
+
+
+
+
+![skeleton parts](<images/Screenshot 2026-10-21 234542.png>)
+---
