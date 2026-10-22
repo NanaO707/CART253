@@ -21,6 +21,12 @@ let ribCageOn = false;
 //tint color when a skeleton part is clicked
 let playColor = "#423197";
 
+//sound variables fopr each skele part
+let skullSound;
+let armSound;
+let ribCageSound;
+
+
 
 
 /**
@@ -36,7 +42,15 @@ async function setup() {
     armImage = await loadImage('assets/images/ingameHand.png');
     ribCageImage = await loadImage('assets/images/ingameCage.png');
 
+    //referncing p5 createAudio().
+    armSound = createAudio('assets/sounds/816866__josefpres__piano-loops-148-efect-4-octave-long-loop-120-bpm.wav');
+    skullSound = createAudio('assets/sounds/685055__gregorquendel__symphonic-choir-arpeggio-i-variation-ii.wav');
+    ribCageSound = createAudio('assets/sounds/202197__zagi2__weird-cartoon-groove2.wav');
 
+    //referncing p5 loop()
+    armSound.loop = true;
+    skullSound.loop = true;
+    ribCageSound.loop = true;
 }
 
 /**
@@ -49,7 +63,10 @@ function draw() {
 
     //if skull is on/true. using tint referncing p5. Adds a tint to the image and turns it purple
     if (skullOn) {
+
         tint(playColor);
+        //plays specific sound effect for skull
+        skullSound.play();
 
     }
 
@@ -65,6 +82,9 @@ function draw() {
         //adds a tint to the image and turns it purple
         tint(playColor);
 
+        //plays specific sound effect for
+        armSound.play();
+
     }
 
     else {
@@ -79,13 +99,20 @@ function draw() {
         //adds a tint to the image and turns it purple
         tint(playColor);
 
+        //plays specific sound effect for ribcage
+        ribCageSound.play();
+
     }
 
     else {
         //removes purple tint effect
         noTint();
+
     }
+
     image(ribCageImage, 650, 100);
+
+
 
 
 }
