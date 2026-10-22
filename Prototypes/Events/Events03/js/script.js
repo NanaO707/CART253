@@ -1,9 +1,9 @@
 /**
- * Skeleton melodies 
+ * Skeleton Melodies 
  * Bella Perez
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Click on the 3 skeleton parts to reveal a beautiful composition. One, two, or max three!
+ * 
  */
 
 "use strict";
@@ -25,8 +25,6 @@ let playColor = "#423197";
 let skullSound;
 let armSound;
 let ribCageSound;
-
-
 
 
 /**
@@ -73,6 +71,7 @@ function draw() {
     else {
         //removes purple tint effect
         noTint();
+        //pauses sound
         skullSound.pause();
     }
 
@@ -91,7 +90,7 @@ function draw() {
     else {
         //removes purple tint effect
         noTint();
-
+        //pauses sound
         armSound.pause();
     }
 
@@ -110,12 +109,12 @@ function draw() {
     else {
         //removes purple tint effect
         noTint();
+        //pauses sound
         ribCageSound.pause();
 
     }
 
     image(ribCageImage, 650, 100);
-
 
 
 }
