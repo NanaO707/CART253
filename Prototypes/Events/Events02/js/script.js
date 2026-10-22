@@ -2,7 +2,7 @@
  *Snake Wonders
  *Bella Perez
  * 
- * Snake wonders await please press WASD to move your snake! 
+ * Snake wonders await. Please press WASD to move the little snake! Watch each part of its body move along with it as well. 
  * 
  */
 
@@ -48,6 +48,7 @@ function setup() {
 
 /**
  * The draw function loops endlessly per p5. It draws the snake head and sets snake head movement along the x & y axis. 
+ * Added drawing the body and lerping the body segments to move towards the part in front of it.
 */
 function draw() {
 
@@ -58,7 +59,7 @@ function draw() {
     snake.headX = snake.headX + snake.speedX;
     snake.headY = snake.headY + snake.speedY;
 
-    //Uses lerp referncing p5.
+    //Uses lerp referncing p5. For each body segment, it moves towards the snake part in front of it.
     snake.firstBodyX = lerp(snake.firstBodyX, snake.headX, 0.1);
     snake.firstBodyY = lerp(snake.firstBodyY, snake.headY, 0.1);
 
