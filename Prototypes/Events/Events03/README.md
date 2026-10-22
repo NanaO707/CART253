@@ -1,8 +1,8 @@
 # TITLE OF PROJECT
 
-AUTHOR NAME
+Bella Perez
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](https://nanao707.github.io/CART253/Prototypes/Events/Events03/index.html)
 
 ## Description
 
@@ -10,14 +10,16 @@ This description should help the reader understand what the program is, anything
 
 ## Attribution
 
-This bit should attribute any code, assets or other elements used taken from other sources. For example:
-
 > - This project uses [p5.js](https://p5js.org).
-> - The clown image is a capture of the clown from the Apple emoji character set.
-> - The barking sound effect is "single dog bark 1" by crazymonke9 from freesound.org: https://freesound.org/people/crazymonke9/sounds/418107/
+
+> - The skeleton images are from napstyy on github used in a previous group project together. 
+
+> - The singing sound is Symphonic Choir Arpeggio - I - Variation II by GregorQuendel -- https://freesound.org/s/685055/ -- License: Attribution NonCommercial 4.0
+
+> - The xylophone sound is weird cartoon groove2.wav by zagi2 -- https://freesound.org/s/202197/ -- License: Attribution NonCommercial 4.0
+
+> - The piano sound is from Piano loops 148 efect 4 octave long loop 120 bpm by josefpres -- https://freesound.org/s/816866/ -- License: Creative Commons 0
 
 ## License
-
-This bit could include the license you want to apply to your work. For example:
 
 > This project is licensed under a Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en)) license with the exception of libraries and other components with their own licenses.

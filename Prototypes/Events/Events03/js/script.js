@@ -1,5 +1,5 @@
 /**
- * Title of Project
+ * Skeleton melodies 
  * Bella Perez
  * 
  * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
@@ -13,6 +13,8 @@
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
 function setup() {
+
+    //create canvas
     createCanvas(900, 900);
 
 
@@ -23,5 +25,9 @@ function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
+
+    //add background color
+    background('black');
+
 
 }
