@@ -1,12 +1,12 @@
-# TITLE OF PROJECT
+# Cute Lampy 
 
 Bella Perez
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](https://nanao707.github.io/CART253/Prototypes/Functions/Functions01/index.html)
 
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+Double click on the screen to turn on Lampy's light and increase their resolution and vice versa.
 
 ## Attribution
 
@@ -14,7 +14,5 @@ This description should help the reader understand what the program is, anything
 > - The lamp image and gif is by [rand12] (https://rand12.itch.io/free-lamp-with-animations)
 
 ## License
-
-This bit could include the license you want to apply to your work. For example:
 
 > This project is licensed under a Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en)) license with the exception of libraries and other components with their own licenses.
