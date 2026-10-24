@@ -34,6 +34,8 @@ I like playing and making games! Specifically, I like story-driven games or thos
 
 ![alt text](<images/eyeballSC.png>)
 
+---
+
 ### Get that carrot! - Variables
 
 - [Prototype-Varaibles](Prototypes/Variables/Variables01/index.html)
@@ -51,6 +53,8 @@ I like playing and making games! Specifically, I like story-driven games or thos
 - [Prototype-Varaibles](Prototypes/Variables/Variables03/index.html)
 
 ![door](<images/Screenshot 2026-10-11 221140.png>)
+
+---
 
 ###  What's under my bed - Conditionals
 
@@ -70,6 +74,7 @@ I like playing and making games! Specifically, I like story-driven games or thos
 
 ![rain](images/Screenshot%202026-10-20%20151336.png)
 
+---
 
 ### A one, one, one, two, three - Events
 
@@ -89,9 +94,36 @@ I like playing and making games! Specifically, I like story-driven games or thos
 
 ![skeleton parts](<images/Screenshot 2026-10-21 234542.png>)
 
+---
+
+### Cute Lampy - Functions
+
+- [Prototype-Functions](Prototypes/Functions/Functions01/index.html)
+
+![lampy](<images)
+
+
+###  - Functions
+
+- [Prototype-Functions](Prototypes/Functions/Functions02/index.html)
+
+![](<images>)
+
+
+###  - Functions
+
+- [Prototype-Functions](Prototypes/Functions/Functions03/index.html)
+
+![skeleton parts](<images>)
+
+---
+
+
 ## Journal Below!!
 
 [Reflective Journal](Journal.md)
+
+---
 
 ## Challenges Below!!
 
@@ -99,6 +131,7 @@ I like playing and making games! Specifically, I like story-driven games or thos
 - [Challenges-Conditionals](Challenges/Conditionals_BellaPerez/index.html)
 - [Challenges-Events](Challenges/Events_BellaPerez/index.html)
 
+---
 
 ## Attribution
 
