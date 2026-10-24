@@ -2,16 +2,19 @@
  * Cute Lampy 
  * Bella Perez
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Double click on the screen to turn on Lampy's light and increase their resolution and vice versa.
+ * 
  */
 
 "use strict";
 
+//variable for lamp static image
 let lampImg;
 
+//variable for lamp gif
 let lampGif;
 
+//check whether the light in on or off(bool)
 let lampOn = false;
 
 /**
@@ -38,10 +41,8 @@ function draw() {
     //bg set to black
     background(0);
 
-    drawLamp(lampGif, 450, 450, 400, 400);
-    drawLamp(lampImg, 450, 450, 400, 400);
-
-
+    //call lamp change function
+    lampChange();
 }
 
 function drawLamp(img, x, y, w, h) {
@@ -49,6 +50,22 @@ function drawLamp(img, x, y, w, h) {
     image(img, x, y, w, h);
 }
 
+function lampChange() {
+
+    if (lampOn) {
+
+        drawLamp(lampGif, 450, 450, 400, 400);
+
+    }
+
+    else {
+
+        drawLamp(lampImg, 450, 450, 400, 400);
+
+
+    }
+
+}
 
 function doubleClicked() {
 
