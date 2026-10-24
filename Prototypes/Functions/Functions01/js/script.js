@@ -12,11 +12,14 @@ let lampImg;
 
 let lampGif;
 
+let lampOn = false;
+
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
 async function setup() {
 
+    //creating a canvas
     createCanvas(900, 900);
 
     imageMode(CENTER);
@@ -25,17 +28,31 @@ async function setup() {
 
     lampImg = await loadImage('assets/images/lamp.png');
 
-
-
 }
-
 
 /**
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
 
-    image(lampGif, 450, 450);
-    image(lampImg, 450, 450, 64 * 6, 64 * 6);
+    //bg set to black
+    background(0);
+
+    drawLamp(lampGif, 450, 450, 400, 400);
+    drawLamp(lampImg, 450, 450, 400, 400);
+
 
 }
+
+function drawLamp(img, x, y, w, h) {
+
+    image(img, x, y, w, h);
+}
+
+
+function doubleClicked() {
+
+    lampOn = !lampOn;
+
+}
+
