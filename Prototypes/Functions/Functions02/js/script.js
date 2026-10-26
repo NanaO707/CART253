@@ -8,11 +8,15 @@
 
 "use strict";
 
+let catImg;
+
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
-function setup() {
+async function setup() {
 
+    createCanvas(1920, 1080);
+    catImg = await loadImage('assets/images/3-2-nyan-cat-transparent.png');
 }
 
 
@@ -21,4 +25,7 @@ function setup() {
 */
 function draw() {
 
+    background(0);
+
+    image(catImg, 200, 500);
 }

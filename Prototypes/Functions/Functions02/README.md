@@ -11,8 +11,9 @@ This description should help the reader understand what the program is, anything
 ## Attribution
 
 > - This project uses [p5.js](https://p5js.org).
-> - The clown image is a capture of the clown from the Apple emoji character set.
-> - The barking sound effect is "single dog bark 1" by crazymonke9 from freesound.org: https://freesound.org/people/crazymonke9/sounds/418107/
+> - Nyan Cat Transparent from [FreePNGimg.com] (https://freepngimg.com/png/15404-nyan-cat-transparent")
+
+
 
 ## License
 
