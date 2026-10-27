@@ -9,8 +9,11 @@
 "use strict";
 
 let catImg;
+
 let catX = 200;
 let catY = 500;
+
+let catAngle = Math.PI;
 
 let strokeColors = {
     pink: 'magenta',
@@ -24,6 +27,8 @@ let strokeColors = {
 async function setup() {
 
     createCanvas(1920, 1080);
+
+    imageMode(CENTER);
     catImg = await loadImage('assets/images/3-2-nyan-cat-transparent.png');
 }
 
@@ -34,11 +39,6 @@ async function setup() {
 function draw() {
 
     background(0);
-
-    //adding arc shapes
-    drawArc(1000, 640, 580, 580, strokeColors.pink, 40);
-    drawArc(1000, 660, 580, 580, strokeColors.blue, 30);
-
     catTracker();
 
     image(catImg, catX, catY);
@@ -57,5 +57,32 @@ function drawArc(x, y, w, h, color, lineWeight) {
 
 function catTracker() {
 
+    //adding arc shapes
+    drawArc(1000, 640, 580, 580, strokeColors.pink, 40);
+    drawArc(1000, 660, 580, 580, strokeColors.blue, 30);
 
+    catAngle = catAngle + 0.02;
+
+    if (catAngle > TWO_PI) {
+
+        catAngle = PI;
+
+    }
+
+    catX = arcX(catAngle);
+    catY = arcY(catAngle);
+
+
+}
+
+function arcX(angle) {
+
+    return 1000 + 580 / 2 * cos(angle);
+
+
+}
+
+function arcY(angle) {
+
+    return 640 + 580 / 2 * sin(angle);
 }
