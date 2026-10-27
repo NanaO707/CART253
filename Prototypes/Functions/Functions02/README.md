@@ -1,19 +1,17 @@
-# TITLE OF PROJECT
+# The return of Nyan Cat...
 
 Bella Perez
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](https://nanao707.github.io/CART253/Prototypes/Functions/Functions02/index.html)
 
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+Watch nyan cat fly along a blue and magenta rainbow!
 
 ## Attribution
 
 > - This project uses [p5.js](https://p5js.org).
 > - Nyan Cat Transparent from [FreePNGimg.com] (https://freepngimg.com/png/15404-nyan-cat-transparent")
-
-
 
 ## License
 
