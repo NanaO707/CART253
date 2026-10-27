@@ -103,7 +103,7 @@ I like playing and making games! Specifically, I like story-driven games or thos
 ![lampy](<images)
 
 
-###  - Functions
+### The return of Nyan Cat... - Functions
 
 - [Prototype-Functions](Prototypes/Functions/Functions02/index.html)
 
