@@ -116,3 +116,22 @@ For this prototype, Skeleton Melodies was the one I had the most fun with. When 
 
 ![skeleton parts](<images/Screenshot 2026-10-21 234542.png>)
 ---
+
+## 2026/11/02 - Functions Prototypes
+
+## Functions 01
+
+
+![lampy](<images/Screenshot 2026-10-24 161528.png>)
+
+
+## Functions 02
+
+![nyan cat](<images/Screenshot 2026-11-02 004618.png>)
+
+
+
+
+## Functions 03
+
+![star](<images/Screenshot 2026-11-02 003545.png>)

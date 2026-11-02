@@ -100,21 +100,21 @@ I like playing and making games! Specifically, I like story-driven games or thos
 
 - [Prototype-Functions](Prototypes/Functions/Functions01/index.html)
 
-![lampy](<images)
+![lampy](<images/Screenshot 2026-10-24 161528.png>)
 
 
 ### The return of Nyan Cat... - Functions
 
 - [Prototype-Functions](Prototypes/Functions/Functions02/index.html)
 
-![](<images>)
+![nyan cat](<images/Screenshot 2026-11-02 004618.png>)
 
 
 ###  Flickering Nightly Stars - Functions
 
 - [Prototype-Functions](Prototypes/Functions/Functions03/index.html)
 
-![star](<images>)
+![star](<images/Screenshot 2026-11-02 003545.png>)
 
 ---
 
