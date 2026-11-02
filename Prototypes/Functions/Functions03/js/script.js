@@ -15,7 +15,7 @@ let bgColor = '#020523';
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
 function setup() {
-    //create canvas
+    //creates canvas
     createCanvas(900, 900);
 
 }
@@ -29,7 +29,12 @@ function draw() {
     //draws bg
     background(bgColor);
     //draws star
-    drawStar(400, 100);
+    //drawStar(400, 100);
+
+    let x = starDistribution(mouseX, 100);
+    let y = starDistribution(mouseY, 60);
+
+    drawStar(x, y);
 
 
 
@@ -37,12 +42,19 @@ function draw() {
 }
 
 function drawStar(x, y) {
-    // no outline
+    //no outline
     noStroke();
     //fill color
     fill('#fff6b2');
-    // draws star shaped like a diamond
+    //draws star shaped like a diamond
     quad(x, y - 15, x + 10, y, x, y + 15, x - 10, y);
 
+
+}
+
+function starDistribution(center, range) {
+
+    //returns a random # near the middle
+    return center + random(-range, range);
 
 }
