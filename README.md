@@ -110,11 +110,11 @@ I like playing and making games! Specifically, I like story-driven games or thos
 ![](<images>)
 
 
-###  - Functions
+###  Flickering Nightly Stars - Functions
 
 - [Prototype-Functions](Prototypes/Functions/Functions03/index.html)
 
-![skeleton parts](<images>)
+![star](<images>)
 
 ---
 
