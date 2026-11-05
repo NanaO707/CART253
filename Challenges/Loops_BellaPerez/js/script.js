@@ -1,102 +1,73 @@
 /**
- * Mr. Furious
+ * Lines
  * Bella Perez
  * 
- * 
- * A guy who becomes visibly furious!
- * Step 2: Make Mr. Furious turn red over time
-He’s getting angrier and angrier, so make him turn more and more red over time.
-
-Maybe you should constrain any numbers you change so they stay in a reasonable range?
-
-Step 3: Make day turn to night
-Make the sky (the background) turn from blue to black over time. You’ll need to create a new variable (probably a JavaScript Object called sky?) for this, then change it over time (probably it’ll be a bit like Mr. Furious’ fill?).
-
-Step 4: Add an annoying bird
-Add a “bird” to this world that flies across the screen from left to right. Any colour, any speed, any shape you like. Mr. Furious hates birds. This is probably why he’s so angry right now.
+ * A series of lines across the canvas
  */
 
 "use strict";
 
-let backGroundColor = {
-    r:0,
-    g:0,
-    b:255
-}
+// Step 2: Loop it!
+// Convert the challenge code by adding variables and using a while-loop to replace the incredibly repetitive drawing instructions.
 
+// 🌶️ Consider varying some other quality of the lines like their stroke weight, length or even their rotation through the loop as well.
 
-// Our friend Mr. Furious
-let mrFurious = {
-  // Position and size
-  x: 200,
-  y: 200,
-  size: 100,
-  rage:10,
-  // Colour
-  fill: {
-    r: 255,
-    g: 255,
-    b: 255
-  }
+//   Step 3: Going down!
+// Now that you have a lovely loop example, add another loop to draw horizontal lines from the left to the right of the canvas.
 
-   
-};
+// 🌶️ What if you keep one end of the lines fixed while the other end changes ?
 
-let bird = {
-  // Position and size
-  x: 20,
-  y: 50,
-  size: 30,
-  // Colour
-  fill: {
-    r: 0,
-    g: 0,
-    b: 255
-  }
-};
-
-
+//   Step 4: Gradient!
+// Make the background more interesting by drawing a gradient across it made out of lines.Use a for-loop for this one.
+// You’ll probably want to draw the lines very close together(maybe just one pixel apart ?) 
+// and you could consider using map() to set their colour relative to their position on the canvas.
 
 /**
- * Create the canvas
+ * Creates the canvas
  */
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(500, 500);
 }
 
 /**
- * Draw (and update) Mr. Furious
+ * Draws lines across the canvas with increasing thickness and
+ * gradually lightening colour
  */
 function draw() {
-  background(backGroundColor.r, backGroundColor.g, backGroundColor.b);
-  backGroundColor.b = backGroundColor.b - 1;
-  
-  // Draw Mr. Furious as a coloured circle
-  push();
-  noStroke();
-  fill(mrFurious.fill.r, mrFurious.fill.g, mrFurious.fill.b);
-  ellipse(mrFurious.x, mrFurious.y, mrFurious.size,mrFurious.size);
 
-  mrFurious.fill.g = mrFurious.fill.g -.5;
-  mrFurious.fill.b = mrFurious.fill.b -.5;
+  background("pink");
 
-  mrFurious.x = mrFurious.x + random(10, -10);
-  mrFurious.y = mrFurious.y + random(10, -10);
+  for (let i = 0; i < width; i++) {
 
-  mrFurious.y = mrFurious.y -.2;
-  
+    let gradientIndex = map(i, 0, width, 0, 255);
 
+    stroke(240, gradientIndex, 100);
+    line(i, 0, i, height);
+  }
 
-  fill("yellow");
-  ellipse(bird.x,bird.y,bird.size,bird.size);
-  bird.x = bird.x + 1;
-  bird.x = constrain(bird.x,0,370);
+  let x = 0;
+  let strokeColor = 0;
 
- 
+  while (x < width) {
+    stroke(strokeColor);
+    line(x, 0, x, height);
 
+    x += 50;
+    strokeColor += 25;
+  }
 
-    pop();
-  
+  let y = 0;
+
+  strokeColor = 0;
+
+  while (y < width) {
+    stroke(strokeColor);
+    line(0, y, width, y);
+
+    y += 50;
+    strokeColor += 25;
+  }
+
 
 
 }

@@ -147,7 +147,7 @@ I like playing and making games! Specifically, I like story-driven games or thos
 - [Challenges-Variables ](Challenges/Variables_BellaPerez/index.html) 
 - [Challenges-Conditionals](Challenges/Conditionals_BellaPerez/index.html)
 - [Challenges-Events](Challenges/Events_BellaPerez/index.html)
-- [Challenges-Events](Challenges/Events_BellaPerez/index.html)
+- [Challenges-Loops](Challenges/Loops_BellaPerez/index.html)
 
 ---
 
