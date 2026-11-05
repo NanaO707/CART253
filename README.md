@@ -118,6 +118,23 @@ I like playing and making games! Specifically, I like story-driven games or thos
 
 ---
 
+### - Arrays
+
+- [Prototype-Arrays](Prototypes/Arrays/Arrays01/index.html)
+
+![](<images>)
+
+### - Arrays
+
+- [Prototype-Arrays](Prototypes/Arrays/Arrays02/index.html)
+
+![](<images>)
+
+### - Arrays
+
+- [Prototype-Arrays](Prototypes/Arrays/Arrays03/index.html)
+
+![](<images>)
 
 ## Journal Below!!
 
@@ -130,6 +147,7 @@ I like playing and making games! Specifically, I like story-driven games or thos
 - [Challenges-Variables ](Challenges/Variables_BellaPerez/index.html) 
 - [Challenges-Conditionals](Challenges/Conditionals_BellaPerez/index.html)
 - [Challenges-Events](Challenges/Events_BellaPerez/index.html)
+- [Challenges-Events](Challenges/Events_BellaPerez/index.html)
 
 ---
 
@@ -140,5 +158,5 @@ I like playing and making games! Specifically, I like story-driven games or thos
 
 
 ## License
-
+ 
 > This project is licensed under a Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en)) license with the exception of libraries and other components with their own licenses.
