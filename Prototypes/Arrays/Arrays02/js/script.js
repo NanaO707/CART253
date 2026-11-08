@@ -8,8 +8,12 @@
 
 "use strict";
 
+//sound effect array
 let soundEffects = [];
+//sound assest array
+let soundAssests = ['135785__henrythetrain__air-rush.wav', '201808__fartheststar__poker_chips6.wav', '338746__cabled_mess__guitar-fragment-14-march-2016.wav', '655834__yevashenpillay__broom-sweep-repeated.wav', 'bark.wav'];
 
+//fixed sound effect amount
 const SOUNDEFFECTSAMOUNT = 5;
 
 /**
@@ -17,7 +21,15 @@ const SOUNDEFFECTSAMOUNT = 5;
 */
 function setup() {
 
+    //create canvas
     createCanvas(900, 900);
+
+    //
+    for (let i = 0; i < SOUNDEFFECTSAMOUNT; i++) {
+
+        soundEffects[i] = createAudio('assets/sounds/' + soundAssests[i]);
+
+    }
 
 }
 
@@ -28,5 +40,7 @@ function setup() {
 function draw() {
 
     background(0);
+
+    random(soundEffects).play();
 
 }
