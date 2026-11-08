@@ -2,13 +2,13 @@
  * Soapy strikes again
  * Bella Perez
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * An army of soap is at work. Some are smaller, others bigger, all moving up and down at various speeds.
+ * 
  */
 
 "use strict";
 
-//declaring bg color black
+//declaring bg color
 let bgColor = '#66f0de';
 
 //single soap image
@@ -24,7 +24,7 @@ let soapSize = [];
 //amount of soap images 
 const SOAPAMOUNT = 23;
 
-
+//array for soap speed
 let soapSpeed = [];
 
 /**
@@ -39,12 +39,7 @@ async function setup() {
 
     //calls function
     soapRandomizer();
-
-
-
-
 }
-
 
 /**
  * For the draw function, I used p5's respective resources for loadImage syntax. Contains loop to draws the images, with a randomized soap size and position. 
@@ -58,6 +53,7 @@ function draw() {
         image(soapImg, soapX[i], soapY[i], soapSize[i], soapSize[i]);
     }
 
+    //calls soap move function
     soapMove();
 
 
@@ -76,26 +72,31 @@ function soapRandomizer() {
 
         //randomly assigns a size within range 
         soapSize[i] = random(843 / 12, 1053 / 10);
+        //randomly assigns a speed within range 
         soapSpeed[i] = random(2, 12);
 
     }
 }
 /**
- * For the soapMove function, it moves the mob of soap up and down continously.
+ * For the soapMove function, it moves the mob of soap up and down continously. 
+ * Changes direction based on if it's at the top or bottom of the canvas.
 */
 function soapMove() {
 
+    //loop all the soap until soap amount
     for (let i = 0; i < SOAPAMOUNT; i++) {
 
+        //soap moves vertically based on speed
         soapY[i] += soapSpeed[i];
 
+        //if it's at the bottom, it moves the soap up
         if (soapY[i] + soapSize[i] > height) {
 
             soapY[i] = height - soapSize[i];
             soapSpeed[i] = -soapSpeed[i];
 
         }
-
+        //if it's at the top, it moves the soap down
         if (soapY[i] < 0) {
 
             soapY[i] = 0;
@@ -103,8 +104,5 @@ function soapMove() {
 
         }
     }
-
-
-
 }
 
