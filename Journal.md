@@ -137,3 +137,20 @@ For this prototype, Skeleton Melodies was the one I had the most fun with. When 
 ## Functions 03
 
 ![star](<images/Screenshot 2026-11-02 003545.png>)
+---
+
+## 2026/11/08 - Array Prototypes
+
+
+## Arrays 01
+
+![soapy army](<images/Screenshot 2026-11-08 150431.png>)
+
+## Arrays 02
+
+![gradient](<images/Screenshot 2026-11-08 150510.png>)
+
+
+## Arrays 03
+
+![magic eight ball](<images/Screenshot 2026-11-08 150443.png>)

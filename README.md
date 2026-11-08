@@ -118,23 +118,23 @@ I like playing and making games! Specifically, I like story-driven games or thos
 
 ---
 
-### - Arrays
+### Soapy strikes again - Arrays
 
 - [Prototype-Arrays](Prototypes/Arrays/Arrays01/index.html)
 
-![](<images>)
+![soapy army](<images/Screenshot 2026-11-08 150431.png>)
 
-### - Arrays
+### Random Sounds - What a Hoot! - Arrays
 
 - [Prototype-Arrays](Prototypes/Arrays/Arrays02/index.html)
 
-![](<images>)
+![gradient](<images/Screenshot 2026-11-08 150510.png>)
 
-### - Arrays
+### Magic Eight Ball, Predict My Future - Arrays
 
 - [Prototype-Arrays](Prototypes/Arrays/Arrays03/index.html)
 
-![](<images>)
+![magic eight ball](<images/Screenshot 2026-11-08 150443.png>)
 
 ## Journal Below!!
 
