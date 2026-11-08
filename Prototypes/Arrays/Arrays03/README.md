@@ -1,4 +1,4 @@
-# TITLE OF PROJECT
+# Magic Eight Ball, Predict My Future
 
 Bella Perez
 
@@ -6,7 +6,10 @@ Bella Perez
 
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+Welcome to the magical realm of fortune telling through a magic eight ball. 
+Ask a question either out loud or in your head.
+Hold the mouse to shake the the magical tool, and once you release it, 
+an answer awaits you...
 
 ## Attribution
 
@@ -14,7 +17,5 @@ This description should help the reader understand what the program is, anything
 > - The eight ball image is from https://commons.wikimedia.org/wiki/File:Magic_eight_ball.png
 
 ## License
-
-This bit could include the license you want to apply to your work. For example:
 
 > This project is licensed under a Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en)) license with the exception of libraries and other components with their own licenses.
