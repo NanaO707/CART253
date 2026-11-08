@@ -24,6 +24,9 @@ let soapSize = [];
 //amount of soap images 
 const SOAPAMOUNT = 23;
 
+
+let soapSpeed = [];
+
 /**
  * The setup function is used as a base in p5 and will only run once. Contains creating a canvas and async function setup to load a image in refernce to p5. 
 */
@@ -51,9 +54,11 @@ function draw() {
     background(bgColor);
 
     //loop to draw the images at a specific position and size
-    for (let i = 0; i <= SOAPAMOUNT; i++) {
+    for (let i = 0; i < SOAPAMOUNT; i++) {
         image(soapImg, soapX[i], soapY[i], soapSize[i], soapSize[i]);
     }
+
+    soapMove();
 
 
 
@@ -71,6 +76,35 @@ function soapRandomizer() {
 
         //randomly assigns a size within range 
         soapSize[i] = random(843 / 12, 1053 / 10);
+        soapSpeed[i] = random(2, 12);
 
     }
 }
+/**
+ * For the soapMove function, it moves the mob of soap up and down continously.
+*/
+function soapMove() {
+
+    for (let i = 0; i < SOAPAMOUNT; i++) {
+
+        soapY[i] += soapSpeed[i];
+
+        if (soapY[i] + soapSize[i] > height) {
+
+            soapY[i] = height - soapSize[i];
+            soapSpeed[i] = -soapSpeed[i];
+
+        }
+
+        if (soapY[i] < 0) {
+
+            soapY[i] = 0;
+            soapSpeed[i] = -soapSpeed[i];
+
+        }
+    }
+
+
+
+}
+
