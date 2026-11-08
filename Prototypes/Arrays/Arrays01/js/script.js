@@ -25,37 +25,52 @@ let soapSize = [];
 const SOAPAMOUNT = 23;
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * The setup function is used as a base in p5 and will only run once. Contains creating a canvas and async function setup to load a image in refernce to p5. 
 */
 async function setup() {
 
+    //create a canvas
     createCanvas(900, 900);
+    //load image 
     soapImg = await loadImage('assets/images/Soap-Background-PNG.png');
 
-    for (let i = 0; i < SOAPAMOUNT; i++) {
+    //calls function
+    soapRandomizer();
 
-        soapX[i] = random(0, 800);
-        soapY[i] = random(0, 800);
 
-        soapSize[i] = random(843 / 12, 1053 / 10);
-
-    }
 
 
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * For the draw function, I used p5's respective resources for loadImage syntax. Contains loop to draws the images, with a randomized soap size and position. 
 */
 function draw() {
 
     background(bgColor);
 
+    //loop to draw the images at a specific position and size
     for (let i = 0; i <= SOAPAMOUNT; i++) {
         image(soapImg, soapX[i], soapY[i], soapSize[i], soapSize[i]);
     }
 
 
 
+}
+/**
+ * For the soapRandomizer function, it randomly assigns a value for x & y and size.
+*/
+function soapRandomizer() {
+    //loop all the soap until it reaches 23 or soap amount
+    for (let i = 0; i < SOAPAMOUNT; i++) {
+
+        //randomly assigns a value to stay at a specific location x & y
+        soapX[i] = random(0, 800);
+        soapY[i] = random(0, 800);
+
+        //randomly assigns a size within range 
+        soapSize[i] = random(843 / 12, 1053 / 10);
+
+    }
 }
