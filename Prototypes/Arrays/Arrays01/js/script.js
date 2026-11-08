@@ -9,7 +9,7 @@
 "use strict";
 
 //declaring bg color black
-let bgColor = ('black');
+let bgColor = '#66f0de';
 
 //single soap image
 let soapImg;
@@ -22,14 +22,25 @@ let soapY = [];
 let soapSize = [];
 
 //amount of soap images 
-const SOAPAMOUNT = 55;
+const SOAPAMOUNT = 23;
 
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
-function setup() {
+async function setup() {
 
-    createCanvas(900, 900)
+    createCanvas(900, 900);
+    soapImg = await loadImage('assets/images/Soap-Background-PNG.png');
+
+    for (let i = 0; i < SOAPAMOUNT; i++) {
+
+        soapX[i] = random(0, 800);
+        soapY[i] = random(0, 800);
+
+        soapSize[i] = random(843 / 12, 1053 / 10);
+
+    }
+
 
 }
 
@@ -38,5 +49,13 @@ function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
+
+    background(bgColor);
+
+    for (let i = 0; i <= SOAPAMOUNT; i++) {
+        image(soapImg, soapX[i], soapY[i], soapSize[i], soapSize[i]);
+    }
+
+
 
 }
