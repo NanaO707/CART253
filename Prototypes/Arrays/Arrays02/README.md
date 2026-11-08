@@ -1,6 +1,6 @@
 # TITLE OF PROJECT
 
-AUTHOR NAME
+Bella Perez
 
 [View this project online](URL_FOR_THE_RUNNING_PROJECT)
 
@@ -13,8 +13,13 @@ This description should help the reader understand what the program is, anything
 This bit should attribute any code, assets or other elements used taken from other sources. For example:
 
 > - This project uses [p5.js](https://p5js.org).
-> - The clown image is a capture of the clown from the Apple emoji character set.
 > - The barking sound effect is "single dog bark 1" by crazymonke9 from freesound.org: https://freesound.org/people/crazymonke9/sounds/418107/
+> - poker_chips6.wav by fartheststar -- https://freesound.org/s/201808/ -- License: Creative Commons 0
+> - Air Rush.wav by Henrythetrain -- https://freesound.org/s/135785/ -- License: Creative Commons 0
+> - Guitar fragment 14 March 2016.wav by cabled_mess -- https://freesound.org/s/338746/ -- License: Creative Commons 0
+> - Broom Sweep Repeated.wav by YevashenPillay -- https://freesound.org/s/655834/ -- License: Attribution 4.0
+
+
 
 ## License
 
