@@ -67,6 +67,8 @@ function draw() {
         drawEllipse();
     }
 
+    noLoop();
+
     // i = 0;
 
     // y = height / 2;
