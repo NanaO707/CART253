@@ -11,7 +11,7 @@
 let magicBallImg;
 
 //empty string of what prediction it is
-let chosenPredictions = '';
+let chosenPrediction = '';
 
 //array of predictions
 let predictionWords = ['yes', 'no', 'do not ask', 'you are wrong', 'very dobtful', 'outlook good', 'ask again later', 'it is certain'];
@@ -26,6 +26,13 @@ async function setup() {
     createCanvas(900, 900);
     //center image
     imageMode(CENTER);
+
+    //centers the text
+    textAlign(CENTER, CENTER);
+
+    //size of text is set 
+    textSize(20);
+
     //load image
     magicBallImg = await loadImage('assets/images/Magic_eight_ball.png');
 
@@ -41,5 +48,14 @@ function draw() {
 
     //draws the image and its position
     image(magicBallImg, width / 2, height / 2);
+
+    //text fill color
+    fill('white');
+
+    //draws text based on empty strings and its position
+    text(chosenPrediction, width / 2, height / 2);
+
+    //empty string cycles through all random predictions and chooses one out of all strings in the array
+    chosenPrediction = random(predictionWords);
 
 }
