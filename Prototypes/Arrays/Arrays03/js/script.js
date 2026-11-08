@@ -16,6 +16,15 @@ let chosenPrediction = '';
 //array of predictions
 let predictionWords = ['yes', 'no', 'do not ask', 'you are wrong', 'very dobtful', 'outlook good', 'ask again later', 'it is certain'];
 
+//array of shake speeds
+let shakeSpeed = [2, 5, 8, 10, 13, 16, 20];
+
+let shakeAmount = 0;
+
+//shake x & y variables
+let shakeX = 0;
+let shakeY = 0;
+
 
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
@@ -31,7 +40,7 @@ async function setup() {
     textAlign(CENTER, CENTER);
 
     //size of text is set 
-    textSize(20);
+    textSize(30);
 
     //load image
     magicBallImg = await loadImage('assets/images/Magic_eight_ball.png');
@@ -47,13 +56,25 @@ function draw() {
     background('blue');
 
     //draws the image and its position
-    image(magicBallImg, width / 2, height / 2);
+    image(magicBallImg, width / 2 + shakeX, height / 2 + shakeY);
+
+
+    shakeX = random(-shakeAmount, shakeAmount);
+    shakeY = random(-shakeAmount, shakeAmount);
 
     //text fill color
     fill('white');
 
     //draws text based on empty strings and its position
     text(chosenPrediction, width / 2, height / 2);
+
+}
+/**
+ * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+*/
+function mousePressed() {
+
+    shakeAmount = random(shakeSpeed);
 
     //empty string cycles through all random predictions and chooses one out of all strings in the array
     chosenPrediction = random(predictionWords);
