@@ -2,8 +2,11 @@
  * Magic Eight Ball, Predict My Future
  * Bella Perez
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Welcome to the magical realm of fortune telling through a magic eight ball. 
+ * Ask a question either out loud or in your head.
+ * Hold the mouse to shake the the magical tool, and once you release it,
+ * an answer awaits you...
+ * 
  */
 
 "use strict";
@@ -28,7 +31,7 @@ let shakeY = 0;
 
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * The setup function is used as a base in p5 and will only run once. Contains creating a canvas and async function setup to load a image in reference to p5. Also sets the text to center and its size.
 */
 async function setup() {
 
@@ -50,7 +53,8 @@ async function setup() {
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * The draw function sets the bg color and draws the magic eight ball with its shake and position.
+ *  Draws the text and sets shakeX and Y to a random range between - & + shake amount.
 */
 function draw() {
     //background color
@@ -60,6 +64,7 @@ function draw() {
     image(magicBallImg, width / 2 + shakeX, height / 2 + shakeY);
 
 
+    //sets shakeX and Y to a random range between - & + shake amount
     shakeX = random(-shakeAmount, shakeAmount);
     shakeY = random(-shakeAmount, shakeAmount);
 
@@ -71,18 +76,25 @@ function draw() {
 
 }
 /**
- * Chooses a random shake speed and prediction every click from their respective array
+ * Chooses a random shake speed in the array. 
 */
 function mousePressed() {
 
     //cycles through the shake speeds and chooses one every click
     shakeAmount = random(shakeSpeed);
 
+    //no prediction while shaking
+    chosenPrediction = '';
+
+}
+/**
+ * Chooses a random prediction everytime a click is released in the array. Stops the shaking as well.
+*/
+function mouseReleased() {
+    //stops the shaking
+    shakeAmount = 0;
+
     //empty string cycles through all random predictions and chooses one out of all strings in the array
     chosenPrediction = random(predictionWords);
 
-}
-
-function mouseReleased() {
-    shakeAmount = 0;
 }
