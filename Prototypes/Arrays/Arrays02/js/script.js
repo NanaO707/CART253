@@ -16,6 +16,8 @@ let soundAssests = ['135785__henrythetrain__air-rush.wav', '201808__fartheststar
 //fixed sound effect amount
 const SOUNDEFFECTSAMOUNT = 5;
 
+let gradient = [];
+
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
@@ -24,9 +26,10 @@ function setup() {
     //create canvas
     createCanvas(900, 900);
 
-    //
+    // Loops the sound effect amount 
     for (let i = 0; i < SOUNDEFFECTSAMOUNT; i++) {
 
+        //loads each sound using the asset file array. Using p5 createAudio.
         soundEffects[i] = createAudio('assets/sounds/' + soundAssests[i]);
 
     }
@@ -39,8 +42,24 @@ function setup() {
 */
 function draw() {
 
+    //bg
     background(0);
 
-    random(soundEffects).play();
+    //loops every line less than the width of the canvas
+    for (let i = 0; i < width; i++) {
 
+        gradient[i] = map(i, 0, width, 0, 255);
+
+        stroke(100, gradient[i], 250);
+        line(i, 0, i, height);
+
+    }
+
+
+
+}
+
+function mouseClicked() {
+    //chooses a random sound effect from the array and plays it
+    random(soundEffects).play();
 }
