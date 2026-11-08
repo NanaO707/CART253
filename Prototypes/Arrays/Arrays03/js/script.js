@@ -19,6 +19,7 @@ let predictionWords = ['yes', 'no', 'do not ask', 'you are wrong', 'very dobtful
 //array of shake speeds
 let shakeSpeed = [2, 5, 8, 10, 13, 16, 20];
 
+//initial shake amount
 let shakeAmount = 0;
 
 //shake x & y variables
@@ -55,7 +56,7 @@ function draw() {
     //background color
     background('blue');
 
-    //draws the image and its position
+    //draws the image and its position with it's shake along the x & y axes
     image(magicBallImg, width / 2 + shakeX, height / 2 + shakeY);
 
 
@@ -70,13 +71,18 @@ function draw() {
 
 }
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Chooses a random shake speed and prediction every click from their respective array
 */
 function mousePressed() {
 
+    //cycles through the shake speeds and chooses one every click
     shakeAmount = random(shakeSpeed);
 
     //empty string cycles through all random predictions and chooses one out of all strings in the array
     chosenPrediction = random(predictionWords);
 
+}
+
+function mouseReleased() {
+    shakeAmount = 0;
 }
