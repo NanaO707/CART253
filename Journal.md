@@ -121,13 +121,15 @@ For this prototype, Skeleton Melodies was the one I had the most fun with. When 
 
 ## Functions 01
 
-
+While making the lamp prototype, I dabbled in using a GIF and an image. Once you double-click, the animation plays of the lamp turning on. I tried to use .hide() and .show(), but after looking at p5, I found out you can only use those for HTML elements. I accidentally gave two variables the same name, which broke my code. What's cool is that the lamp appears to be static, and on double-click it becomes an animation, almost as if the lamp is coming to life. I would further add a sound integration for when the lamp turns on/off.
 
 
 ![lampy](<images/Screenshot 2026-10-24 161528.png>)
 
 
 ## Functions 02
+
+For the Nyan Cat prototype, I wanted to incorporate arcs and learned how to use them in p5 with a slight spin-off of the original. What’s cool is the cat's position is calculated using sin and cos to follow the arc. Also I learned that the syntax is PIE, TWO_PI, QUARTER_PI,etc. and is new knowledge that I have in my repertoire. I would also add the cat moving left and right along the rainbow and perhaps varied colors following the mouse. I hope it brings some joy and nostalgia by seeing an old internet meme in a different context.
 
 ![nyan cat](<images/Screenshot 2026-11-02 004618.png>)
 
@@ -136,21 +138,33 @@ For this prototype, Skeleton Melodies was the one I had the most fun with. When 
 
 ## Functions 03
 
+For the stars prototype, there is only a single star per frame, and it changes positions quickly to make it look like multiple stars. I love that the screenshot shows only one star, and the live feed feels like a different experience entirely. It was my first time using quad, and all the x and y values started to blend together in my brain. I hope people find the effect fun with the tracking of the mouse. I would add a more detailed background with a moon with holes.
+
+
 ![star](<images/Screenshot 2026-11-02 003545.png>)
 ---
+
 
 ## 2026/11/08 - Array Prototypes
 
 
 ## Arrays 01
 
+For the soapy prototype, the idea popped into my head while I was cleaning my sink. I added a lot of arrays for the speed, x, y, and size. What surprised me was that forgetting to use a single [i] made the soap disappear completely because the speed became “not a number” according to JavaScript. I hope people enjoy the soapy nature of this prototype and that it maybe reminds them to clean. I would add bubbles appearing once the soap moves vertically, with it being tied to its speed.  
+
+
 ![soapy army](<images/Screenshot 2026-11-08 150431.png>)
 
 ## Arrays 02
+
+For the sound effects prototype, I added an array of sound effects, 5 to be exact. The vision for this idea was to experience a bunch of random sound effects that leave users a little confused and slightly amused. I initially put play inside draw, which caused a lot of errors, so I changed it to a click event. For the gradient, I used the method we had done in class but slightly altered it to be an array instead. For loading the sound effects, it took me a bit longer to get it down since I added the wrong path. I would add the gradient changing color on each click to give each sound effect a different color. 
 
 ![gradient](<images/Screenshot 2026-11-08 150510.png>)
 
 
 ## Arrays 03
+
+For the magic eight ball prototype, I had a lot of fun bringing back childhood nostalgia, and I hope it does the same for others as well. I used an array to list the different possible responses and a shake array to alter the speed randomly. I decided to separate the interactions into two events, mousePressed() and mouseReleased(), to shake the ball and then await the answer. I would change it to require the user to hold the mouse for 5 seconds to receive their prediction. 
+
 
 ![magic eight ball](<images/Screenshot 2026-11-08 150443.png>)
