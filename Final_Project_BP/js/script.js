@@ -1,5 +1,5 @@
 /**
- * Title of Project
+ * Innocuous Memories: shards of the past
  * Bella Perez
  * 
  * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
@@ -8,10 +8,26 @@
 
 "use strict";
 
+let memoryButtons = [];
+let homeButton;
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
 function setup() {
+
+    createCanvas(1920, 1080);
+
+    let memoryNames = [
+        'Swing',
+        'Pjs',
+        'Apple Batter',
+        'Paint Station',
+        'Fairy Dress Braid'
+    ];
+
+
+
+
 
 }
 

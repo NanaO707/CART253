@@ -168,3 +168,11 @@ For the magic eight ball prototype, I had a lot of fun bringing back childhood n
 
 
 ![magic eight ball](<images/Screenshot 2026-11-08 150443.png>)
+
+---
+
+## 2026/11/18 - Final project (Week 1)
+
+
+
+![Moodboard](images/Screenshot%202026-11-18%20221027.png)
