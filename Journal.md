@@ -173,6 +173,29 @@ For the magic eight ball prototype, I had a lot of fun bringing back childhood n
 
 ## 2026/11/18 - Final project (Week 1)
 
+In the first week of my final project, I wanted to flesh out a core theme. I knew I wanted to work with mirror shards, and I often brainstormed in the shower. Mirrors' symbolism can extend to our self-image, reflection, distortion, and memories. I feel that as I’ve grown older, a lot of pain and sadness resides in me, specifically after losing my mom. For the project, I wanted to highlight times of earnest joy and innocence from my childhood to reconnect with a younger and innocent part of myself. I used Figma as a mood board and to jot down ideas for a cohesive workflow.
+
+Using 5 broken mirror shards, I want to create an interactive puzzle with users, where every piece represents unlocking a hidden memory. Shard 1: Twisting a swing as a child and letting it unravel. (childhood fun) Shard 2: Crying really hard because you have to throw your favourite PJ’s away since they don’t fit anymore. Shard 3: Helping my mom bake apple muffins and afterwards licking the batter. Shard 4: Preschool playtime: you are randomly given your favourite activity (painting station). Shard 5: Learning to braid by using the end pieces of my fairy Halloween costume (I was 5). 
+
+After unlocking every memory through a click, the user will be able to puzzle all the shards together(draggable feature), revealing a childlike crayon drawing of a heart and a message in typewriter fashion saying: reconnect and remember your little self.
+
+For the coding aspect, I was thinking a lot about organization. I feel like my scope might be too big, considering there are 5 different interactions and 1 final one. Right now, I’m focusing on providing a basic base of only 5 shards being clickable with an array of identifiable strings for each memory. Stage one is reusing the same image of a glass shard, so I don’t hit a roadblock focusing on every asset being perfect at first. I also came up with a title that I feel encompasses the idea and heart behind the project: Innocuous Memories: shards of the past. 
+
+Mechanics: Click on any mirror shard(no fixed order). Each shard button pops up that says Return to missing pieces.  
+
+Swing: twist and unwind the swing at least once. 
+Pj’s: throw them in the garbage can. Once it’s thrown, you hear a child crying sound effect.
+Bake: Drag the mouse over the cake batter to “lick” it clean.
+Painting: Brush strokes appear on a blank canvas; 3 colour options(red, green, blue)
+Braid: 3 strands moving to create a braid.
+
+After each task is done: a typewritten text appears explaining the memory. Relaxing sound effects.
+
+Drag each shard into the proper place to reveal the last image. Sound effects: heart beating, with ambiance.
+ 
+Visual details: typewriter text effect, buttons, hand-drawn crayon images. Unsure about assets; likely a mix of p5shapes and digital drawings.
 
 
 ![Moodboard](images/Screenshot%202026-11-18%20221027.png)
+
+---

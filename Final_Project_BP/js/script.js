@@ -16,6 +16,7 @@ let homeButton;
 */
 async function setup() {
 
+    //create canvas
     createCanvas(1920, 1080);
 
     shardImg = await loadImage('assets/images/craiyon_223825_image.png');
