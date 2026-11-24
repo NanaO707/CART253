@@ -35,6 +35,16 @@ async function setup() {
         createShard('Fairy Dress Braid', 1200, 550),
     ];
 
+    // creating button to return home 
+    homeButton = createButton('Return to missing shards');
+    //button pos
+    homeButton.position(50, 50);
+    //on mouse clicked returns to mirror memory and hides the button
+    homeButton.mouseClicked(returnToMirror);
+    //default set to hide
+    homeButton.hide();
+
+
 }
 
 
@@ -44,10 +54,20 @@ async function setup() {
 function draw() {
     background(0);
 
-    //for loop to draw all the shards 
-    for (let i = 0; i < shards.length; i++) {
-        image(shardImg, shards[i].x, shards[i].y);
+    if (currentMemory === 'mirror') {
+        //for loop to draw all the shards 
+        for (let i = 0; i < shards.length; i++) {
+            image(shardImg, shards[i].x, shards[i].y);
 
+        }
+
+    }
+
+    else {
+        //placeholder style
+        fill(255);
+        textSize(50);
+        text(currentMemory, 500, 500);
     }
 
 }
@@ -86,15 +106,23 @@ function detectShard(shard) {
 */
 function mousePressed() {
 
-    //for loop for every shard and uses the array of shards.
-    for (let i = 0; i < shards.length; i++) {
+    if (currentMemory === 'mirror') {
 
-        //if true when you click it prints the respective name
-        if (detectShard(shards[i])) {
+        //for loop for every shard and uses the array of shards.
+        for (let i = 0; i < shards.length; i++) {
 
-            //placeholder for testing
-            console.log(shards[i].name);
+            //if true when you click it prints the respective name
+            if (detectShard(shards[i])) {
+
+                //placeholder for testing
+                currentMemory = shards[i].name;
+                homeButton.show();
+            }
         }
     }
+}
 
+function returnToMirror() {
+    currentMemory = 'mirror';
+    homeButton.hide();
 }
