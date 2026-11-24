@@ -17,6 +17,15 @@ let shards = [];
 let currentMemory = 'mirror';
 //button to return to mirror scene
 let homeButton;
+
+let painting;
+
+let paintingBox = {
+    x: 460,
+    y: 140,
+    w: 1000,
+    h: 800
+}
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
@@ -47,6 +56,10 @@ async function setup() {
     //default set to hide
     homeButton.hide();
 
+    //referencing p5
+    painting = createGraphics(paintingBox.w, paintingBox.h)
+    painting.background(255);
+
 
 }
 
@@ -66,12 +79,23 @@ function draw() {
         }
 
     }
+    //paint station memory draws the canvas
+    else if (currentMemory === 'Paint Station') {
+        drawPaintCanvas();
+    }
 
     else {
         //calls memorytext function
         memoryText();
     }
 
+
+}
+/**
+ * draw the paint canvas
+*/
+function drawPaintCanvas() {
+    image(painting, paintingBox.x, paintingBox.y);
 }
 /**
  * placeholder style of each memory name
