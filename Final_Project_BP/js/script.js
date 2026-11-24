@@ -52,9 +52,11 @@ function draw() {
 
 }
 
-
+/**
+ * function to create each shard using different names, x & y positions
+*/
 function createShard(name, x, y) {
-    //function to create each shard using different names, x & y positions
+
     let shard =
     {
         name: name,
@@ -65,9 +67,12 @@ function createShard(name, x, y) {
     return shard;
 
 }
-
+/**
+ * Detect if the mouse is in the hitbox for each shard
+*/
 function detectShard(shard) {
 
+    //calculates between the left & right and then -->top/7bottom
     return mouseX > shard.x &&
 
         mouseX < shard.x + shardImg.width &&
@@ -76,11 +81,15 @@ function detectShard(shard) {
 
         mouseY < shard.y + shardImg.height;
 }
-
+/**
+ * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+*/
 function mousePressed() {
 
+    //for loop for every shard and uses the array of shards.
     for (let i = 0; i < shards.length; i++) {
 
+        //if true when you click it prints the respective name
         if (detectShard(shards[i])) {
 
             //placeholder for testing
