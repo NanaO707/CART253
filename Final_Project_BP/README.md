@@ -1,4 +1,4 @@
-# TITLE OF PROJECT
+# Innocuous Memories: shards of the past
 
 Bella Perez
 

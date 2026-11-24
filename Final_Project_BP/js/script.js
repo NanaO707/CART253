@@ -10,6 +10,9 @@
 
 //reusing the same image 
 let shardImg = [];
+let shards = [];
+
+let currentMemory = 'mirror';
 let homeButton;
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
@@ -19,19 +22,18 @@ async function setup() {
     //create canvas
     createCanvas(1920, 1080);
 
+    //load image
     shardImg = await loadImage('assets/images/craiyon_223825_image.png');
 
-    let memoryNames = [
-        'Swing',
-        'Pjs',
-        'Apple Batter',
-        'Paint Station',
-        'Fairy Dress Braid'
+    //array of memory shards with each pos and name using a function with parameters
+    shards = [
+        //5 memory shards
+        createShard('Swing', 100, 150),
+        createShard('Pjs', 100, 550),
+        createShard('Apple Batter', 610, 350),
+        createShard('Paint Station', 1200, 150),
+        createShard('Fairy Dress Braid', 1200, 550),
     ];
-
-
-
-
 
 }
 
@@ -42,11 +44,28 @@ async function setup() {
 function draw() {
     background(0);
 
-    //5 memory shards
-    image(shardImg, 100, 150);
-    image(shardImg, 100, 550);
-    image(shardImg, 610, 350);
-    image(shardImg, 1200, 150);
-    image(shardImg, 1200, 550);
+    //for loop to draw all the shards 
+    for (let i = 0; i < shards.length; i++) {
+        image(shardImg, shards[i].x, shards[i].y);
+
+    }
+
+}
+
+
+function createShard(name, x, y) {
+    //function to create each shard using different names, x & y positions
+    let shard =
+    {
+        name: name,
+        x: x,
+        y: y
+    };
+
+    return shard;
+
+}
+
+function mousePressed() {
 
 }
