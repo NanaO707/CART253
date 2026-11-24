@@ -10,9 +10,12 @@
 
 //reusing the same image 
 let shardImg = [];
+//all 5 shards
 let shards = [];
 
+// the main mirror scene
 let currentMemory = 'mirror';
+//button to return to mirror scene
 let homeButton;
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
@@ -54,6 +57,7 @@ async function setup() {
 function draw() {
     background(0);
 
+    //if the current memory is the full broken mirror
     if (currentMemory === 'mirror') {
         //for loop to draw all the shards 
         for (let i = 0; i < shards.length; i++) {
@@ -64,16 +68,22 @@ function draw() {
     }
 
     else {
-        //placeholder style
-        fill(255);
-        textSize(50);
-        text(currentMemory, 500, 500);
+        //calls memorytext function
+        memoryText();
     }
 
 }
+/**
+ * placeholder style of each memory name
+*/
+function memoryText() {
+    fill(255);
+    textSize(50);
+    text(currentMemory, 500, 500);
+}
 
 /**
- * function to create each shard using different names, x & y positions
+ * Function to create each shard using different names, x & y positions
 */
 function createShard(name, x, y) {
 
@@ -111,17 +121,19 @@ function mousePressed() {
         //for loop for every shard and uses the array of shards.
         for (let i = 0; i < shards.length; i++) {
 
-            //if true when you click it prints the respective name
+            //if true when you click it the respective memory is shown
             if (detectShard(shards[i])) {
 
-                //placeholder for testing
+                //changes to current memory clicked on shard and shows return button
                 currentMemory = shards[i].name;
                 homeButton.show();
             }
         }
     }
 }
-
+/**
+ * Returns to mirror scene and hides the button
+*/
 function returnToMirror() {
     currentMemory = 'mirror';
     homeButton.hide();
