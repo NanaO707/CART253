@@ -66,6 +66,26 @@ function createShard(name, x, y) {
 
 }
 
+function detectShard(shard) {
+
+    return mouseX > shard.x &&
+
+        mouseX < shard.x + shardImg.width &&
+
+        mouseY > shard.y &&
+
+        mouseY < shard.y + shardImg.height;
+}
+
 function mousePressed() {
+
+    for (let i = 0; i < shards.length; i++) {
+
+        if (detectShard(shards[i])) {
+
+            //placeholder for testing
+            console.log(shards[i].name);
+        }
+    }
 
 }
