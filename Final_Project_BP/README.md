@@ -17,8 +17,7 @@ This bit should attribute any code, assets or other elements used taken from oth
 > - The trashcan image is from (https://img.favpng.com/5/23/10/icon-blue-trash-can-for-waste-management-BFBLtQ13_t.jpg)
 > - The pjs image is from (https://www.shutterstock.com/image-vector/vector-illustration-pyjamas-hearts-2530231927?dd_referrer=https%3A%2F%2Ftineye.com%2F)
 
+> - The bowl image is from (https://www.wayfair.ca/fr/cuisine/pdp/treasure-gurus-bol-a-melanger-trgu2793.html)
+
 ## License
-
-This bit could include the license you want to apply to your work. For example:
-
 > This project is licensed under a Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en)) license with the exception of libraries and other components with their own licenses.

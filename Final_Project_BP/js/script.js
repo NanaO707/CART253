@@ -17,6 +17,10 @@ let shards = [];
 let pjsImg;
 let trashImg;
 
+//bowl image for apple muffins memory
+let bowlImg;
+let batter;
+
 //user holding pjs
 let draggablePjs = false;
 //variable for if the pj's are in the garbage
@@ -49,6 +53,12 @@ let trashCan = {
     y: 100,
 }
 
+let batterBox = {
+    x: 660,
+    y: 240,
+    w: 600,
+    h: 600
+}
 
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
@@ -62,6 +72,7 @@ async function setup() {
     shardImg = await loadImage('assets/images/craiyon_223825_image.png');
     pjsImg = await loadImage('assets/images/craiyon_205903_image.png');
     trashImg = await loadImage('assets/images/craiyon_205032_image.png');
+    bowlImg = await loadImage('assets/images/craiyon_141437_image.png');
 
 
     //array of memory shards with each pos and name using a function with parameters
@@ -89,6 +100,14 @@ async function setup() {
     painting.background(255);
 
 
+    //referencing p5
+    batter = createGraphics(batterBox.w, batterBox.h);
+
+    batter.noStroke();
+    batter.fill('#e4be7b');
+
+    //batter leftover chunk for now
+    batter.ellipse(300, 300, 300, 220);
 }
 
 
@@ -114,6 +133,9 @@ function draw() {
     //pj memory and draws the trashcan and pjs
     else if (currentMemory === 'Pjs') {
         drawPjs();
+    }
+    else if (currentMemory === 'Apple Batter') {
+        drawBatter();
     }
 
     else {
@@ -256,4 +278,11 @@ function mouseReleased() {
     }
 
     draggablePjs = false;
+}
+
+function drawBatter() {
+    //draws bowl
+    image(bowlImg, batterBox.x, batterBox.y, batterBox.w, batterBox.h);
+    //draws batter
+    image(batter, batterBox.x, batterBox.y);
 }
