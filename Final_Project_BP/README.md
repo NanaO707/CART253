@@ -13,8 +13,8 @@ This description should help the reader understand what the program is, anything
 This bit should attribute any code, assets or other elements used taken from other sources. For example:
 
 > - This project uses [p5.js](https://p5js.org).
-> - The clown image is a capture of the clown from the Apple emoji character set.
-> - The barking sound effect is "single dog bark 1" by crazymonke9 from freesound.org: https://freesound.org/people/crazymonke9/sounds/418107/
+> - The shard image is from (https://pixabay.com/photos/shard-broken-glass-glass-sharp-8296/)
+> - The trashcan image is from (https://img.favpng.com/5/23/10/icon-blue-trash-can-for-waste-management-BFBLtQ13_t.jpg)
 
 ## License
 
