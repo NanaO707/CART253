@@ -19,6 +19,8 @@ let trashImg;
 
 //user holding pjs
 let draggablePjs = false;
+//variable for if the pj's are in the garbage
+let pjsInGarbage = false;
 
 // the main mirror scene
 let currentMemory = 'mirror';
@@ -228,14 +230,30 @@ function drawPjs() {
         pjs.x = mouseX - pjsImg.width / 4;
         pjs.y = mouseY - pjsImg.height / 4;
     }
+
+    //if pjs are not in the garbage can then the pjs image is drawn
+    if (pjsInGarbage === false) {
+        //drws pjs
+        image(pjsImg, pjs.x, pjs.y, pjsImg.width / 2, pjsImg.height / 2);
+    }
+    //placeholder text :p
+    else {
+        fill(255);
+        textSize(50);
+        text('bleh bleh bleh', 500, 500);
+    }
     //draws trashcan
     image(trashImg, trashCan.x, trashCan.y);
-    //drws pjs
-    image(pjsImg, pjs.x, pjs.y, pjsImg.width / 2, pjsImg.height / 2);
 }
 /**
- * on  mouse release the pjs aren't draggable
+ * on mouse release the pjs aren't draggable. When on the trashcan the pj's are not visible.
 */
 function mouseReleased() {
+    //if pjs are draggable on the trash can
+    if (draggablePjs === true && detectObjectOnMouse(trashCan.x, trashCan.y, trashImg.width, trashImg.height)) {
+        //pjs aren't drawn
+        pjsInGarbage = true;
+    }
+
     draggablePjs = false;
 }
