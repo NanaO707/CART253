@@ -17,9 +17,9 @@ let shards = [];
 let currentMemory = 'mirror';
 //button to return to mirror scene
 let homeButton;
-
+//the visual graphics
 let painting;
-
+//the painting box width,height and x & y 
 let paintingBox = {
     x: 460,
     y: 140,
@@ -58,6 +58,7 @@ async function setup() {
 
     //referencing p5
     painting = createGraphics(paintingBox.w, paintingBox.h)
+    //change painting bg color to white
     painting.background(255);
 
 
@@ -89,12 +90,28 @@ function draw() {
         memoryText();
     }
 
-
 }
 /**
  * draw the paint canvas
 */
 function drawPaintCanvas() {
+
+    if (mouseIsPressed && detectPaintCanvas()) {
+
+        //red paint (placeholder)
+        painting.stroke(250, 0, 0);
+        //line thickness
+        painting.strokeWeight(20);
+
+        painting.line(
+            //uses pmouse to track the every frame consistently 
+            pmouseX - paintingBox.x,
+            pmouseY - paintingBox.y,
+            mouseX - paintingBox.x,
+            mouseY - paintingBox.y
+        );
+    }
+    //shows the image/painting 
     image(painting, paintingBox.x, paintingBox.y);
 }
 /**
@@ -161,4 +178,19 @@ function mousePressed() {
 function returnToMirror() {
     currentMemory = 'mirror';
     homeButton.hide();
+}
+/**
+ * detects if the mouse is inside the easel
+*/
+function detectPaintCanvas() {
+
+    //calculates between the left & right and then -->top/7bottom
+    return mouseX > paintingBox.x &&
+
+        mouseX < paintingBox.x + paintingBox.w &&
+
+        mouseY > paintingBox.y &&
+
+        mouseY < paintingBox.y + paintingBox.h;
+
 }
