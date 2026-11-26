@@ -103,11 +103,14 @@ async function setup() {
     //referencing p5
     batter = createGraphics(batterBox.w, batterBox.h);
 
+    //no outline
     batter.noStroke();
+    //fill color
     batter.fill('#e4be7b');
 
     //batter leftover chunk for now
-    batter.ellipse(300, 300, 300, 220);
+    batter.ellipse(305, 335, 280, 250);
+
 }
 
 
@@ -279,8 +282,32 @@ function mouseReleased() {
 
     draggablePjs = false;
 }
-
+/**
+ * detects if the mouse is inside the batter and that mouse pressed is true.
+*/
 function drawBatter() {
+
+    if (mouseIsPressed && detectObjectOnMouse(batterBox.x, batterBox.y, batterBox.w, batterBox.h)) {
+
+        //sets erase to full strength referencing p5
+        batter.erase(255);
+
+        //stroke set to visible 
+        batter.stroke(255);
+        //line thickness
+        batter.strokeWeight(60);
+
+        batter.line(
+            //uses pmouse to track every frame consistently 
+            pmouseX - batterBox.x,
+            pmouseY - batterBox.y,
+            mouseX - batterBox.x,
+            mouseY - batterBox.y
+        );
+
+        //stops erasing
+        batter.noErase();
+    }
     //draws bowl
     image(bowlImg, batterBox.x, batterBox.y, batterBox.w, batterBox.h);
     //draws batter
