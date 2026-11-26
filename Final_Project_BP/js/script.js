@@ -13,6 +13,7 @@ let shardImg = [];
 //all 5 shards
 let shards = [];
 
+//pj memory images
 let pjsImg;
 let trashImg;
 
@@ -21,8 +22,11 @@ let draggablePjs = false;
 
 // the main mirror scene
 let currentMemory = 'mirror';
+
 //button to return to mirror scene
 let homeButton;
+
+
 //the visual graphics
 let painting;
 //the painting box width,height and x & y 
@@ -78,7 +82,7 @@ async function setup() {
     homeButton.hide();
 
     //referencing p5
-    painting = createGraphics(paintingBox.w, paintingBox.h)
+    painting = createGraphics(paintingBox.w, paintingBox.h);
     //change painting bg color to white
     painting.background(255);
 
@@ -120,7 +124,7 @@ function draw() {
  * draw the paint canvas
 */
 function drawPaintCanvas() {
-
+    // detects if the mouse is inside the easel and that mouse pressed is true
     if (mouseIsPressed && detectObjectOnMouse(paintingBox.x, paintingBox.y, paintingBox.w, paintingBox.h)) {
 
         //red paint (placeholder)
@@ -163,21 +167,10 @@ function createShard(name, x, y) {
     return shard;
 
 }
+
 /**
- * Detect if the mouse is in the hitbox for each shard
+ * One function that detects when the mouse is on an object.
 */
-// function detectShard(shard) {
-
-//     //calculates between the left & right and then -->top/7bottom
-//     return mouseX > shard.x &&
-
-//         mouseX < shard.x + shardImg.width &&
-
-//         mouseY > shard.y &&
-
-//         mouseY < shard.y + shardImg.height;
-// }
-
 function detectObjectOnMouse(x, y, w, h) {
 
     //calculates between the left & right and then -->top/7bottom
@@ -199,7 +192,7 @@ function mousePressed() {
         //for loop for every shard and uses the array of shards.
         for (let i = 0; i < shards.length; i++) {
 
-            //if true when you click it the respective memory is shown
+            //if true when you click it the respective memory is shown and detects if the mouse is in the hitbox for each shard
             if (detectObjectOnMouse(shards[i].x, shards[i].y, shardImg.width, shardImg.height)) {
 
                 //changes to current memory clicked on shard and shows return button
@@ -209,11 +202,15 @@ function mousePressed() {
         }
     }
     //pjs draggable only in its respective memory when clicked
-    else if (currentMemory === 'Pjs')
+    else if (currentMemory === 'Pjs') {
+        //detects if the mouse is on the pjs
         if (detectObjectOnMouse(pjs.x, pjs.y, pjsImg.width / 2, pjsImg.height / 2)) {
+            //pjs become draggable
             draggablePjs = true;
         }
+    }
 }
+
 /**
  * Returns to mirror scene and hides the button
 */
@@ -222,25 +219,10 @@ function returnToMirror() {
     homeButton.hide();
 }
 /**
- * detects if the mouse is inside the easel
-*/
-// function detectPaintCanvas() {
-
-//     //calculates between the left & right and then -->top/7bottom
-//     return mouseX > paintingBox.x &&
-
-//         mouseX < paintingBox.x + paintingBox.w &&
-
-//         mouseY > paintingBox.y &&
-
-//         mouseY < paintingBox.y + paintingBox.h;
-
-// }
-/**
  * draws the trash and pj images 
 */
 function drawPjs() {
-
+    //if the pjs are draggable then the pj x & y calculates the movement and the center of it's axis
     if (draggablePjs === true) {
 
         pjs.x = mouseX - pjsImg.width / 4;
