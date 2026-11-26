@@ -21,6 +21,8 @@ let trashImg;
 let bowlImg;
 let batter;
 
+let eraseBatterTime = 0;
+
 //user holding pjs
 let draggablePjs = false;
 //variable for if the pj's are in the garbage
@@ -143,7 +145,7 @@ function draw() {
 
     else {
         //calls memorytext function
-        memoryText();
+        memoryNameTxt();
     }
 
 }
@@ -173,11 +175,18 @@ function drawPaintCanvas() {
 /**
  * placeholder style of each memory name
 */
-function memoryText() {
+function memoryNameTxt() {
     fill(255);
     textSize(50);
     text(currentMemory, 500, 500);
 }
+
+function memoryStoryTxt(message) {
+    fill(255);
+    textSize(50);
+    text(message, 500, 500);
+}
+
 
 /**
  * Function to create each shard using different names, x & y positions
@@ -263,9 +272,7 @@ function drawPjs() {
     }
     //placeholder text :p
     else {
-        fill(255);
-        textSize(50);
-        text('bleh bleh bleh', 500, 500);
+        memoryStoryTxt('bleh bleh bleh');
     }
     //draws trashcan
     image(trashImg, trashCan.x, trashCan.y);
@@ -307,9 +314,19 @@ function drawBatter() {
 
         //stops erasing
         batter.noErase();
+        //calculates  in milisecs time batter is being erased
+        eraseBatterTime += deltaTime;
     }
     //draws bowl
     image(bowlImg, batterBox.x, batterBox.y, batterBox.w, batterBox.h);
     //draws batter
     image(batter, batterBox.x, batterBox.y);
+
+    //5 secs of erasing batter unlocks a story element
+    if (eraseBatterTime > 5000) {
+
+        memoryStoryTxt('bleh bleh bleh');
+    }
+
+
 }
