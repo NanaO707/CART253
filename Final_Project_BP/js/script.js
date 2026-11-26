@@ -13,6 +13,9 @@ let shardImg = [];
 //all 5 shards
 let shards = [];
 
+let pjsImg;
+let trashImg;
+
 // the main mirror scene
 let currentMemory = 'mirror';
 //button to return to mirror scene
@@ -26,6 +29,18 @@ let paintingBox = {
     w: 1000,
     h: 800
 }
+
+let pjs = {
+    x: 200,
+    y: 450,
+}
+
+let trashCan = {
+    x: 1500,
+    y: 100,
+}
+
+
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
@@ -34,8 +49,15 @@ async function setup() {
     //create canvas
     createCanvas(1920, 1080);
 
-    //load image
+    //load images
     shardImg = await loadImage('assets/images/craiyon_223825_image.png');
+    pjsImg = await loadImage('assets/images/craiyon_205903_image.png');
+    trashImg = await loadImage('assets/images/craiyon_205032_image.png');
+
+    //pjs.h= pjs.w*(p)
+
+
+
 
     //array of memory shards with each pos and name using a function with parameters
     shards = [
@@ -83,6 +105,10 @@ function draw() {
     //paint station memory draws the canvas
     else if (currentMemory === 'Paint Station') {
         drawPaintCanvas();
+    }
+    //pj memory and draws the trashcan and pjs
+    else if (currentMemory === 'Pjs') {
+        drawPjs();
     }
 
     else {
@@ -193,4 +219,13 @@ function detectPaintCanvas() {
 
         mouseY < paintingBox.y + paintingBox.h;
 
+}
+/**
+ * draws the trash and pj images 
+*/
+function drawPjs() {
+    //draws trashcan
+    image(trashImg, trashCan.x, trashCan.y);
+    //drws pjs
+    image(pjsImg, pjs.x, pjs.y, pjsImg.width / 2, pjsImg.height / 2);
 }

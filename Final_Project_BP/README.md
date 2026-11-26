@@ -15,6 +15,7 @@ This bit should attribute any code, assets or other elements used taken from oth
 > - This project uses [p5.js](https://p5js.org).
 > - The shard image is from (https://pixabay.com/photos/shard-broken-glass-glass-sharp-8296/)
 > - The trashcan image is from (https://img.favpng.com/5/23/10/icon-blue-trash-can-for-waste-management-BFBLtQ13_t.jpg)
+> - The pjs image is from (https://www.shutterstock.com/image-vector/vector-illustration-pyjamas-hearts-2530231927?dd_referrer=https%3A%2F%2Ftineye.com%2F)
 
 ## License
 
