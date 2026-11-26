@@ -199,3 +199,21 @@ Visual details: typewriter text effect, buttons, hand-drawn crayon images. Unsur
 ![Moodboard](images/Screenshot%202026-11-18%20221027.png)
 
 ---
+
+## 2026/11/25 - Final project (Week 2)
+
+For week 2, I made sure each click works with each individual fragment of the mirror.  I decided to restructure the code a bit by creating a reusable function containing the parameters for the name, x, and y variables for every memory name and its position. All five shards are in an array that uses a simple console log to test switching(clicking) between memories.  I also added a universal button to allow users to go back to the main scene, otherwise known as the mirror. When doing so, there was a bug where the button didn’t work every time since one click was being received as two. The bug derived from the button bringing me back to the mirror scene, since mousePressed ran at the same time. Whenever my mouse was on a shard, the memory would reopen. I fixed it by using mouseClicked since it waits until the mouse is released. 
+
+I worked on the painting station memory where users can paint a drawing, hopefully to inspire creativity. The writing aspect/ story elements are currently missing. I discovered the use of pmouse with p5, allowing me to hold the mouse position from the previous frame. This makes the painting feature look more fluid and less static. The paint is created using a stroke and using createGraphics to act as a second canvas referencing p5. The background erases everything every frame. For now, it currently has only one color, red, without the visible dialogue. In Google Docs, I began writing out the story elements for the shards. 
+
+I also worked on the PJs memory, where users can hold the mouse on the PJs and throw them away in the trash, or, in code, the PJ image doesn’t draw when the mouse is released on the trash. I made a small error when doing the draggable feature where I accidentally wrote pjs.x twice, so it only moved horizontally. At first, I put the draggable code in draw instead of mousePressed, so the PJs would drag by default. I initially didn’t take the image's center and wrote the width/2 and height /2, but its original image was divided by two already, so it had to be divided by 4 for its center. 
+
+In writing the code for the mouse detection for the painting and pjs, I realized I was using redundant code for calculating the detection of objects. Before, I had them separated into their own functions doing the same calculation, so I made a universal function with parameters for better practice and got rid of code as well. 
+
+I plan on beginning the apple muffin batter memory as my next memory. Right now the idea looks less pretty but is functional; I think polishing will take place in the last week. As bare-bones as it is, it works. I do think I’m a little tight on time, but I still think I can push out the final product as intended. I think worst-case scenario I may cut out the final scene. I really love the story behind this project, so I think once I add the story part it’ll be extra heartwarming. I think right now it has a more silly essence. 
+
+![Shards](<images/Screenshot 2026-11-25 231508.png>)
+![pj's](<images/Screenshot 2026-11-25 231517.png>)
+![paint station](<images/Screenshot 2026-11-25 231540.png>)
+
+---

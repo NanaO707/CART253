@@ -135,7 +135,7 @@ function drawPaintCanvas() {
         painting.strokeWeight(20);
 
         painting.line(
-            //uses pmouse to track the every frame consistently 
+            //uses pmouse to track every frame consistently 
             pmouseX - paintingBox.x,
             pmouseY - paintingBox.y,
             mouseX - paintingBox.x,
